@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tiny Tapeout Shuttle Info Schema",
+  "type": "object",
+  "properties": {
+    "version": { "type": "integer", "minimum": 3, "maximum": 3 },
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "repo": { "type": "string", "format": "uri" },
+    "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "macro": { "type": "string" },
+          "address": { "type": "integer" },
+          "title": { "type": "string" },
+          "author": { "type": "string" },
+          "description": { "type": "string" },
+          "clock_hz": { "type": "integer" },
+          "tiles": { "type": "string", "pattern": "^[1-8]+x[12]$" },
+          "analog_pins": {
+            "type": "array",
+            "items": { "type": "integer" }
+          },
+          "repo": { "type": "string", "format": "uri" },
+          "commit": { "type": "string", "pattern": "^[0-9a-f]{40}|$" },
+          "pinout": {
+            "type": "object",
+            "propertyNames": {
+              "pattern": "^[a-z_]+\\[\\d+\\]$"
+            },
+            "additionalProperties": { "type": "string" }
+          }
+        },
+        "required": [
+          "macro",
+          "address",
+          "title",
+          "author",
+          "description",
+          "clock_hz",
+          "tiles",
+          "analog_pins",
+          "repo",
+          "commit",
+          "pinout"
+        ]
+      }
+    }
+  },
+  "required": ["version", "id", "name", "repo", "commit", "projects"]
+}
