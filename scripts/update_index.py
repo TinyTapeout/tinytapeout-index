@@ -1,5 +1,7 @@
-# Gets shuttle id in the command line and updates the shuttle status
-# uses argparse
+# SPDX-License-Identifier: Apache-2.0
+# This script updates the shuttle index for a given shuttle ID.
+# Copyright (C) 2024 Tiny Tapeout LTD
+# Author: Uri Shaked
 
 import argparse
 import json
