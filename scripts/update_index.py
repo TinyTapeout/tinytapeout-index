@@ -145,6 +145,7 @@ result = {
     "name": shuttle["name"],
     "repo": shuttle["repo"],
     "commit": index_json["commit"],
+    "updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     "projects": projects,
 }
 
@@ -152,6 +153,15 @@ with open(root / "schemas" / "shuttle.schema.json") as f:
     schema = json.load(f)
 
 validate(result, schema)
+
+# Only write output if there's been a change:
+if Path(output_path).exists():
+    with open(output_path) as f:
+        old_content = json.load(f)
+    old_content["updated"] = result["updated"]
+    if old_content == result:
+        logging.info(f"No changes detected, skipping write to {output_path}")
+        sys.exit(0)
 
 logging.info(f"Writing {output_path}")
 with open(output_path, "w") as f:

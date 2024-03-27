@@ -4,6 +4,7 @@
   "name": "Tiny Tapeout 4",
   "repo": "https://github.com/TinyTapeout/tinytapeout-04",
   "commit": "cf48ca5946af0f2fcad9fb479c2624144048a31b",
+  "updated": "2024-03-18T21:42:44Z",
   "projects": [
     {
       "macro": "tt_um_4_LUT_Baungarten",

@@ -4,6 +4,7 @@
   "name": "Tiny Tapeout 2",
   "repo": "https://github.com/TinyTapeout/tinytapeout-02",
   "commit": "872ca6c22c57358f80a30b78544c1192787f7462",
+  "updated": "2024-03-27T13:23:56Z",
   "projects": [
     {
       "macro": "AidanMedcalf_pid_controller",

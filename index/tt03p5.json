@@ -4,6 +4,7 @@
   "name": "Tiny Tapeout 3.5",
   "repo": "https://github.com/TinyTapeout/tinytapeout-03p5",
   "commit": "b511e6d6232bb79a74cdd528eeb2ae67c95d19cc",
+  "updated": "2024-03-18T21:42:44Z",
   "projects": [
     {
       "macro": "tt_um_MichaelBell_hovalaag",
