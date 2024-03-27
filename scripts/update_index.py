@@ -61,11 +61,15 @@ def convert_legacy_pinout(macro: str, is_mux: bool, project_info):
 
 
 def shuttle_index_url(repo: str, shuttle_id: str):
-    if shuttle_id == "tt03":
-        return "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03/main/project_info/index.json"
-    if shuttle_id == "tt03p5":
-        return "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03p5/main/project_info/mux_index.json"
-    return f"https://tinytapeout.github.io/{repo}/shuttle_index.json"
+    url_map = {
+        "tt02": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-02/tt02/project_info/index.json",
+        "tt03": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03/main/project_info/index.json",
+        "tt03p5": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03p5/main/project_info/mux_index.json",
+    }
+    default_url = f"https://tinytapeout.github.io/{repo}/shuttle_index.json"
+
+    return url_map.get(shuttle_id, default_url)
+
 
 root = Path(__file__).resolve().parents[1]
 with open(root / "index" / "index.json") as f:
@@ -99,7 +103,8 @@ for address, project_entry in project_index.items():
     projects_dir = (
         "projects" if args.shuttle_id not in LEGACY_SHUTTLES else "project_info"
     )
-    yaml_url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{projects_dir}/{macro}/info.yaml?token={cache_buster}"
+    branch = "main" if args.shuttle_id != "tt02" else "tt02"
+    yaml_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/{macro}/info.yaml?token={cache_buster}"
     with urllib.request.urlopen(yaml_url) as f:
         project_yaml = yaml.safe_load(f)
     version = project_yaml.get("yaml_version", 1)
