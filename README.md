@@ -12,6 +12,14 @@ This repo contains the index of all the Tiny Tapeouts shuttles since TT02. The m
 
 You can also find the [JSON schema](schemas/shuttle.schema.json) for the shuttle index files.
 
+## API Server
+
+You can access the index files through the API server available at [https://index.tinytapeout.com](https://index.tinytapeout.com).
+
+To access a specific shuttle, just append the shuttle identifier to the URL, followed by `.json`. For example, to access the index file for Tiny Tapeout 4, you can use the following URL: [https://index.tinytapeout.com/tt04.json](https://index.tinytapeout.com/tt04.json).
+
+You can also query specific fields in the index files by using the `fields` query parameter. For example, to get just the repo and address fields for all the projects on Tiny Tapeout 4, you can use the following URL: [https://index.tinytapeout.com/tt04.json?fields=repo,address](https://index.tinytapeout.com/tt04.json?fields=repo,address). The fields should be comma-separated. The "macro" fields is always included in the response.
+
 ## Regenerating the Index
 
 To regenerate the index files, run the following commands:
