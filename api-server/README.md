@@ -4,4 +4,4 @@ This directory contains a simple API server that serves the Tiny Tapeout index f
 
 ## Local development
 
-Run `npm dev` to start the server locally. The server will be available at [http://localhost:3000](http://localhost:3000).
+Run `npm run dev` to start the server locally. The server will be available at [http://localhost:3000](http://localhost:3000).
