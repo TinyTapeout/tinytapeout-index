@@ -18,6 +18,40 @@ import yaml
 # In legacy shuttles, the info.yaml files were committed after the fact, to a different path
 LEGACY_SHUTTLES = ["tt02", "tt03", "tt03p5"]
 
+VALID_PINOUT_KEYS = [
+    "ui[0]",
+    "ui[1]",
+    "ui[2]",
+    "ui[3]",
+    "ui[4]",
+    "ui[5]",
+    "ui[6]",
+    "ui[7]",
+    "uo[0]",
+    "uo[1]",
+    "uo[2]",
+    "uo[3]",
+    "uo[4]",
+    "uo[5]",
+    "uo[6]",
+    "uo[7]",
+    "uio[0]",
+    "uio[1]",
+    "uio[2]",
+    "uio[3]",
+    "uio[4]",
+    "uio[5]",
+    "uio[6]",
+    "uio[7]",
+    "ua[0]",
+    "ua[1]",
+    "ua[2]",
+    "ua[3]",
+    "ua[4]",
+    "ua[5]",
+]
+
+
 parser = argparse.ArgumentParser(description="Update shuttle index")
 parser.add_argument("shuttle_id", type=str, help="Shuttle ID")
 
@@ -92,8 +126,16 @@ with urllib.request.urlopen(shuttle_index_url(repo, args.shuttle_id)) as f:
 projects = []
 cache_buster = int(time.time())
 macro_addresses = {}
-project_index = index_json["mux"] if "mux" in index_json else index_json["scanchain"]
-for address, project_entry in project_index.items():
+project_index = []
+if "projects" in index_json:
+    project_index = zip(
+        map(lambda p: p["address"], index_json["projects"]), index_json["projects"]
+    )
+elif "mux" in index_json:
+    project_index = index_json["mux"].items()
+elif "scanchain" in index_json:
+    project_index = index_json["scanchain"].items()
+for address, project_entry in project_index:
     macro = project_entry["macro"]
     if macro in macro_addresses:
         logging.warning(
@@ -119,6 +161,13 @@ for address, project_entry in project_index.items():
     if not pinout:
         is_mux = version >= 3.5
         pinout = convert_legacy_pinout(macro, is_mux, project_info)
+
+    # Report and remove invalid keys from pinout
+    invalid_keys = set(pinout.keys()) - set(VALID_PINOUT_KEYS)
+    if invalid_keys:
+        logging.warning(f"{macro}: invalid pinout keys: {', '.join(invalid_keys)}")
+    pinout = {k: v for k, v in pinout.items() if k in VALID_PINOUT_KEYS}
+
     projects.append(
         {
             "macro": macro,

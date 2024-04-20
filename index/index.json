@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-03-18T21:42:21Z",
+  "updated": "2024-04-20T09:59:18Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -46,6 +46,15 @@
       "rom_data": "shuttle=tt05\nrepo=TinyTapeout/tinytapeout-05\ncommit=77482643\n",
       "tiles": 384,
       "projects": 174
+    },
+    {
+      "id": "tt06",
+      "name": "Tiny Tapeout 6",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-06",
+      "gds_url": "",
+      "rom_data": null,
+      "tiles": 512,
+      "projects": 237
     }
   ]
 }
