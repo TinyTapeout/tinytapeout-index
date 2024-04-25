@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-04-20T09:59:18Z",
+  "updated": "2024-04-25T14:16:36Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -51,10 +51,10 @@
       "id": "tt06",
       "name": "Tiny Tapeout 6",
       "repo": "https://github.com/TinyTapeout/tinytapeout-06",
-      "gds_url": "",
-      "rom_data": null,
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-06/releases/download/tapeout-ci2404/caravel_240476a0.oas",
+      "rom_data": "shuttle=tt06\nrepo=TinyTapeout/tinytapeout-06\ncommit=4f8caad5\n",
       "tiles": 512,
-      "projects": 237
+      "projects": 238
     }
   ]
 }
