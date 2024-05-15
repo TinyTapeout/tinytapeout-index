@@ -3,8 +3,8 @@
   "id": "tt06",
   "name": "Tiny Tapeout 6",
   "repo": "https://github.com/TinyTapeout/tinytapeout-06",
-  "commit": "4f8caad5f922725e81f85e38e301f856363efbde",
-  "updated": "2024-04-25T14:16:36Z",
+  "commit": "346ba7b547fceb9025ad6074d2d9f16df41ed61a",
+  "updated": "2024-05-15T08:13:42Z",
   "projects": [
     {
       "macro": "tt_um_3515_sequenceDetector",
@@ -7655,7 +7655,7 @@
       "macro": "tt_um_wokwi_390913889347409921",
       "address": 673,
       "title": "Notre Dame Dorms LED",
-      "author": "Allison Fleming & Daniel Yu",
+      "author": "Allison Fleming, Daniel Yu, Matthew Morrison",
       "description": "Solves a puzzle based on the correct selection of Notre Dame dorms",
       "clock_hz": 0,
       "tiles": "1x1",
