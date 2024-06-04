@@ -3,8 +3,8 @@
   "id": "tt07",
   "name": "Tiny Tapeout 7",
   "repo": "https://github.com/TinyTapeout/tinytapeout-07",
-  "commit": "239db054bafb02b90bfd25d141c6b22b3c54d7f1",
-  "updated": "2024-06-02T06:17:14Z",
+  "commit": "a656c24ab0f65f01939a00a6c971395a0d596bad",
+  "updated": "2024-06-04T05:53:40Z",
   "projects": [
     {
       "macro": "tt_um_28add11_QOAdecode",
@@ -633,7 +633,7 @@
     {
       "macro": "tt_um_adennen_inverter",
       "address": 265,
-      "title": "Aron's analog buffer test",
+      "title": "Analog buffer test",
       "author": "Aron Dennen",
       "description": "Double inverter project from Matt's analog course",
       "clock_hz": 0,
@@ -3775,7 +3775,7 @@
     {
       "macro": "tt_um_toivoh_basilisc_2816",
       "address": 967,
-      "title": "Basilisc-2816",
+      "title": "Basilisc-2816 v0.1a CPU",
       "author": "Toivo Henningsson",
       "description": "Small 2-bit serial 8/16 bit CPU",
       "clock_hz": 50000000,
@@ -3795,7 +3795,7 @@
         "uo[0]": "tx_out[0]",
         "uo[1]": "tx_out[1]",
         "uo[2]": "tx_fetch",
-        "uo[3]": "",
+        "uo[3]": "tx_jump",
         "uo[4]": "",
         "uo[5]": "",
         "uo[6]": "",
@@ -3813,7 +3813,7 @@
     {
       "macro": "tt_um_toivoh_basilisc_2816_cpu_OL2",
       "address": 202,
-      "title": "Basilisc-2816",
+      "title": "Basilisc-2816 v0.1b CPU",
       "author": "Toivo Henningsson",
       "description": "Small 2-bit serial 8/16 bit CPU",
       "clock_hz": 50000000,
@@ -3851,7 +3851,7 @@
     {
       "macro": "tt_um_toivoh_basilisc_2816_cpu_exp",
       "address": 72,
-      "title": "Basilisc-2816 Experimental",
+      "title": "Basilisc-2816 v0.1c CPU (experimental)",
       "author": "Toivo Henningsson",
       "description": "Small 2-bit serial 8/16 bit CPU",
       "clock_hz": 50000000,
