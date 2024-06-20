@@ -15,6 +15,7 @@ from pathlib import Path
 
 import yaml
 
+SCANCHAIN_SHUTTLES = ["tt02", "tt03"]
 # In legacy shuttles, the info.yaml files were committed after the fact, to a different path
 LEGACY_SHUTTLES = ["tt02", "tt03", "tt03p5"]
 
@@ -51,6 +52,24 @@ VALID_PINOUT_KEYS = [
     "ua[5]",
 ]
 
+SCANCHAIN_VALID_PINOUT_KEYS = [
+    "io_in[0]",
+    "io_in[1]",
+    "io_in[2]",
+    "io_in[3]",
+    "io_in[4]",
+    "io_in[5]",
+    "io_in[6]",
+    "io_in[7]",
+    "io_out[0]",
+    "io_out[1]",
+    "io_out[2]",
+    "io_out[3]",
+    "io_out[4]",
+    "io_out[5]",
+    "io_out[6]",
+    "io_out[7]",
+]
 
 parser = argparse.ArgumentParser(description="Update shuttle index")
 parser.add_argument("shuttle_id", type=str, help="Shuttle ID")
@@ -76,8 +95,8 @@ def convert_legacy_pinout(macro: str, is_mux: bool, project_info):
     bidirectional = project_info.get("bidirectional", [])
     if not isinstance(bidirectional, list):
         bidirectional = []
-    input_name = "ui_in" if is_mux else "io_in"
-    output_name = "uo_out" if is_mux else "io_out"
+    input_name = "ui" if is_mux else "io_in"
+    output_name = "uo" if is_mux else "io_out"
     for i in range(8):
         pinout[f"{input_name}[{i}]"] = (
             normalize_pin_name(macro, inputs[i]) if i < len(inputs) else ""
@@ -158,15 +177,18 @@ for address, project_entry in project_index:
         else project_yaml["project"]
     )
     pinout = project_yaml.get("pinout", None)
+    valid_pinout_keys = VALID_PINOUT_KEYS
     if not pinout:
-        is_mux = version >= 3.5
+        is_mux = args.shuttle_id not in SCANCHAIN_SHUTTLES
+        if not is_mux:
+            valid_pinout_keys = SCANCHAIN_VALID_PINOUT_KEYS
         pinout = convert_legacy_pinout(macro, is_mux, project_info)
 
     # Report and remove invalid keys from pinout
-    invalid_keys = set(pinout.keys()) - set(VALID_PINOUT_KEYS)
+    invalid_keys = set(pinout.keys()) - set(valid_pinout_keys)
     if invalid_keys:
         logging.warning(f"{macro}: invalid pinout keys: {', '.join(invalid_keys)}")
-    pinout = {k: v for k, v in pinout.items() if k in VALID_PINOUT_KEYS}
+    pinout = {k: v for k, v in pinout.items() if k in valid_pinout_keys}
 
     projects.append(
         {
