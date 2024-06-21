@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-06-02T06:17:14Z",
+  "updated": "2024-06-21T05:24:35Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -46,6 +46,15 @@
       "rom_data": "shuttle=tt05\nrepo=TinyTapeout/tinytapeout-05\ncommit=77482643\n",
       "tiles": 384,
       "projects": 174
+    },
+    {
+      "id": "tt05of",
+      "name": "Tiny Tapeout 5 Open Frame",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-05-openframe",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-05-openframe/releases/download/tapeout-ci2311/caravel_23118e76.oas",
+      "rom_data": "shuttle=tt05of\nrepo=TinyTapeout/tinytapeout-05-openframe\ncommit=867b3b15\n",
+      "tiles": 384,
+      "projects": 175
     },
     {
       "id": "tt06",
