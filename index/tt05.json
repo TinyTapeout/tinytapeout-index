@@ -4,7 +4,7 @@
   "name": "Tiny Tapeout 5",
   "repo": "https://github.com/TinyTapeout/tinytapeout-05",
   "commit": "8f26f9b4d096d93fccf948648c875fe8924f142e",
-  "updated": "2024-06-20T10:15:49Z",
+  "updated": "2024-07-11T07:10:56Z",
   "projects": [
     {
       "macro": "tt_um_4_bit_pipeline_multiplier",
@@ -4588,8 +4588,8 @@
         "ui[7]": "",
         "uo[0]": "~A",
         "uo[1]": "~(A&B)",
-        "uo[2]": "Q",
-        "uo[3]": "~Q",
+        "uo[2]": "~Q",
+        "uo[3]": "Q",
         "uo[4]": "",
         "uo[5]": "",
         "uo[6]": "",

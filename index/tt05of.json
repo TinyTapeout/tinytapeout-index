@@ -4,7 +4,7 @@
   "name": "Tiny Tapeout 5 Open Frame",
   "repo": "https://github.com/TinyTapeout/tinytapeout-05-openframe",
   "commit": "867b3b153923933f86ea723174453a407b14dcb2",
-  "updated": "2024-06-21T05:24:35Z",
+  "updated": "2024-07-11T07:09:20Z",
   "projects": [
     {
       "macro": "tt_um_4_bit_pipeline_multiplier",
@@ -4664,8 +4664,8 @@
         "ui[7]": "",
         "uo[0]": "~A",
         "uo[1]": "~(A&B)",
-        "uo[2]": "Q",
-        "uo[3]": "~Q",
+        "uo[2]": "~Q",
+        "uo[3]": "Q",
         "uo[4]": "",
         "uo[5]": "",
         "uo[6]": "",
