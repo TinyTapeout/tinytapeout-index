@@ -22,6 +22,11 @@ To access a specific shuttle, just append the shuttle identifier to the URL, fol
 
 You can also query specific fields in the index files by using the `fields` query parameter. For example, to get just the repo and address fields for all the projects on Tiny Tapeout 4, you can use the following URL: [https://index.tinytapeout.com/tt04.json?fields=repo,address](https://index.tinytapeout.com/tt04.json?fields=repo,address). The fields should be comma-separated. The "macro" fields is always included in the response.
 
+To get information about a specific project, use one of the following URL patterns:
+
+- `/[shuttle]/[project].json` - Get information about a specific project on a shuttle. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom.json](https://index.tinytapeout.com/tt04/tt_um_chip_rom.json).
+- `/[shuttle]/[project]/info.md` - Get the project's documentation in Markdown format. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom/info.md](https://index.tinytapeout.com/tt04/tt_um_chip_rom/info.md).
+
 ## Regenerating the Index
 
 To regenerate the index files, run the following commands:

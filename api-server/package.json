@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "nitropack": "2.9.5"
+  },
+  "dependencies": {
+    "yaml": "^2.4.5"
   }
 }

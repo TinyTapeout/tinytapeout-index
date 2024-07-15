@@ -2,8 +2,8 @@
 // Copyright 2024 Tiny Tapeout LTD
 // Author: Uri Shaked
 
-import indexJson from '../../../index/index.json';
+import { getShuttles } from '../model/shuttle';
 
-export default eventHandler((event) => {
-  return indexJson;
+export default eventHandler(() => {
+  return getShuttles();
 });

@@ -2,6 +2,16 @@
 // Copyright 2024 Tiny Tapeout LTD
 // Author: Uri Shaked
 
+import {
+  type IShuttleIndex,
+  type IShuttleIndexProject,
+  loadShuttleIndex,
+} from '../../model/shuttle';
+
+type IShuttleIndexPartial = Omit<IShuttleIndex, 'projects'> & {
+  projects: Partial<IShuttleIndexProject>[];
+};
+
 export default eventHandler(async (event) => {
   const { fields } = getQuery(event);
 
@@ -14,17 +24,13 @@ export default eventHandler(async (event) => {
   }
 
   const slug = shuttle.slice(0, -5);
-  const cacheBuster = Date.now();
-  const response = await fetch(
-    `https://raw.githubusercontent.com/TinyTapeout/tinytapeout-index/main/index/${slug}.json?token=${cacheBuster}`,
-  );
-  if (!response.ok) {
+  const index: IShuttleIndexPartial | null = await loadShuttleIndex(slug);
+  if (!index) {
     throw createError({
       status: 404,
       message: 'Not found',
     });
   }
-  const index = await response.json();
 
   if (fields && typeof fields === 'string') {
     index.projects = index.projects.map((project) => {
