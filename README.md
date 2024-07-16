@@ -25,7 +25,7 @@ You can also query specific fields in the index files by using the `fields` quer
 To get information about a specific project, use one of the following URL patterns:
 
 - `/[shuttle]/[project].json` - Get information about a specific project on a shuttle. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom.json](https://index.tinytapeout.com/tt04/tt_um_chip_rom.json).
-- `/[shuttle]/[project]/info.md` - Get the project's documentation in Markdown format. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom/info.md](https://index.tinytapeout.com/tt04/tt_um_chip_rom/info.md).
+- `/[shuttle]/[project]/docs/info.md` - Get the project's documentation in Markdown format. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom/docs/info.md](https://index.tinytapeout.com/tt04/tt_um_chip_rom/info.md).
 
 ## Regenerating the Index
 

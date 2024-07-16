@@ -2,7 +2,7 @@
 // Copyright 2024 Tiny Tapeout LTD
 // Author: Uri Shaked
 
-import { getProjectBaseUrl } from '../../../model/shuttle';
+import { getProjectBaseUrl, oldDocsShuttles } from '../../../../model/shuttle';
 
 export default eventHandler(async (event) => {
   const { shuttle, macro, path } = event.context.params;
@@ -12,6 +12,13 @@ export default eventHandler(async (event) => {
   }
 
   const cacheBuster = Date.now();
-  const infoUrl = `${projectUrl}/${path}?token=${cacheBuster}`;
-  return await fetch(infoUrl);
+
+  if (oldDocsShuttles.includes(shuttle)) {
+    if (!path.startsWith('picture.')) {
+      throw createError({ status: 404, message: 'Not found' });
+    }
+    return await fetch(`${projectUrl}/${path}?token=${cacheBuster}`);
+  }
+
+  return await fetch(`${projectUrl}/docs/${path}?token=${cacheBuster}`);
 });

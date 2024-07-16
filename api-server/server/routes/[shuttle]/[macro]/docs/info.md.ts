@@ -3,7 +3,7 @@
 // Author: Uri Shaked
 
 import YAML from 'yaml';
-import { getProjectBaseUrl, oldDocsShuttles } from '../../../model/shuttle';
+import { getProjectBaseUrl, oldDocsShuttles } from '../../../../model/shuttle';
 
 export default eventHandler(async (event) => {
   const { shuttle, macro } = event.context.params;
