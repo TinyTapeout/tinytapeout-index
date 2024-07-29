@@ -3,8 +3,8 @@
   "id": "tt05",
   "name": "Tiny Tapeout 5",
   "repo": "https://github.com/TinyTapeout/tinytapeout-05",
-  "commit": "5afe0dda9bdafd1ccd85ae2cc6310d6a1590aa80",
-  "updated": "2024-07-25T06:42:25Z",
+  "commit": "725523088586dcd1343bb11fe8269032732ee75d",
+  "updated": "2024-07-29T09:57:47Z",
   "projects": [
     {
       "macro": "tt_um_4_bit_pipeline_multiplier",
@@ -1614,8 +1614,8 @@
       "repo": "https://github.com/htfab/cell-tester",
       "commit": "a35fa3690e5f3678c355685496942a1ea812b540",
       "pinout": {
-        "ui[0]": "A0/A/D",
-        "ui[1]": "A1/B/GATE/CLK",
+        "ui[0]": "A0/A/GATE/CLK",
+        "ui[1]": "A1/B/D",
         "ui[2]": "S/C/RESET_B",
         "ui[3]": "mode bit",
         "ui[4]": "trigger bit",
