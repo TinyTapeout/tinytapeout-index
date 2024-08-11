@@ -2,15 +2,16 @@
 
 This repo contains the index of all the Tiny Tapeouts shuttles since TT02. The main index file is [index/index.json](index/index.json). There is also a per-shuttle index file that contains the list of all the projects that have been taped out on that shuttle:
 
-| Shuttle          | Index File                             |
-|------------------|----------------------------------------|
-| Tiny Tapeout 2   | [index/tt02.json](index/tt02.json)     |
-| Tiny Tapeout 3   | [index/tt03.json](index/tt03.json)     |
-| Tiny Tapeout 3.5 | [index/tt03p5.json](index/tt03p5.json) |
-| Tiny Tapeout 4   | [index/tt04.json](index/tt04.json)     |
-| Tiny Tapeout 5   | [index/tt05.json](index/tt05.json)     |
-| Tiny Tapeout 6   | [index/tt06.json](index/tt06.json)     |
-| Tiny Tapeout 7   | [index/tt07.json](index/tt07.json)     |
+| Shuttle              | Index File                                 |
+|----------------------|--------------------------------------------|
+| Tiny Tapeout 2       | [index/tt02.json](index/tt02.json)         |
+| Tiny Tapeout 3       | [index/tt03.json](index/tt03.json)         |
+| Tiny Tapeout 3.5     | [index/tt03p5.json](index/tt03p5.json)     |
+| Tiny Tapeout 4       | [index/tt04.json](index/tt04.json)         |
+| Tiny Tapeout 5       | [index/tt05.json](index/tt05.json)         |
+| Tiny Tapeout 6       | [index/tt06.json](index/tt06.json)         |
+| Tiny Tapeout 7       | [index/tt07.json](index/tt07.json)         |
+| Tiny Tapeout IHP 0.1 | [index/ttihp0p1.json](index/ttihp0p1.json) |
 
 You can also find the [JSON schema](schemas/shuttle.schema.json) for the shuttle index files.
 
