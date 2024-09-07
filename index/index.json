@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-08-25T10:49:02Z",
+  "updated": "2024-09-07T07:43:23Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -93,6 +93,16 @@
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
       "tiles": 24,
       "projects": 24
+    },
+    {
+      "id": "tt08",
+      "name": "Tiny Tapeout 8",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-08",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-08/releases/download/tapeout-ci2409/caravel_2409485e.oas",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-08/main/projects/{macro}/{macro}.gds",
+      "rom_data": "shuttle=tt08\nrepo=TinyTapeout/tinytapeout-08\ncommit=47aa331b\n",
+      "tiles": 512,
+      "projects": 135
     }
   ]
 }
