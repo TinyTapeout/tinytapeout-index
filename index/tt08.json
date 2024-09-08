@@ -3,8 +3,8 @@
   "id": "tt08",
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
-  "commit": "77030ee6edcbbc33d6769803a39ec97d0d7eba25",
-  "updated": "2024-09-07T07:45:02Z",
+  "commit": "85bb488f0c113b04665a9434561d0df092f857ab",
+  "updated": "2024-09-08T08:42:35Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -2255,9 +2255,9 @@
     {
       "macro": "tt_um_i2c_peripheral_stevej",
       "address": 459,
-      "title": "i2c peripherals: leading zero count and fnv-1a hash",
+      "title": "i2c peripherals demonstrating address decoding and i2c reads",
       "author": "Steve Jenson <stevej@gmail.com>",
-      "description": "An implementation of HyperLogLog in Verilog for sky130",
+      "description": "An i2c peripheral demonstrating address decoding and i2c reads.",
       "clock_hz": 0,
       "tiles": "1x1",
       "analog_pins": [],
