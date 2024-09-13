@@ -3,8 +3,8 @@
   "id": "tt08",
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
-  "commit": "833f34d888de9da169da4ff2ce10c3c15b3dead3",
-  "updated": "2024-09-11T16:56:48Z",
+  "commit": "b4342ed12fe5759cf989cc621f22d3e4d539341d",
+  "updated": "2024-09-13T06:57:26Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -749,7 +749,7 @@
         8
       ],
       "repo": "https://github.com/AsalGolmanesh/tt08-bgr",
-      "commit": "649b1597884b0fdb2e0cf979833fb23245441b4c",
+      "commit": "232fc4d2ddb2331bcfaae091cbc3abde3ca17d70",
       "pinout": {
         "ui[0]": "",
         "ui[1]": "",
@@ -1327,7 +1327,7 @@
         0
       ],
       "repo": "https://github.com/devstdin/tt08-ldo-bg-ref-osc",
-      "commit": "b0af14e2dfc7f1f358d7c684fa234ef10d7308ea",
+      "commit": "b5914a17ac11bd1e49c7fe20ac2cf7b602c53126",
       "pinout": {
         "ui[0]": "OSC_EN",
         "ui[1]": "OSC_RESET",

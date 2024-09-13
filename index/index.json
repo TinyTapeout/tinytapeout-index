@@ -100,7 +100,7 @@
       "repo": "https://github.com/TinyTapeout/tinytapeout-08",
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-08/releases/download/tapeout-ci2409/caravel_2409485e.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-08/main/projects/{macro}/{macro}.gds",
-      "rom_data": "shuttle=tt08\nrepo=TinyTapeout/tinytapeout-08\ncommit=47aa331b\n",
+      "rom_data": "shuttle=tt08\nrepo=TinyTapeout/tinytapeout-08\ncommit=b4342ed1\n",
       "tiles": 512,
       "projects": 135
     }
