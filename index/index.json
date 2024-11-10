@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-11-05T08:11:55.530Z",
+  "updated": "2024-11-10T20:44:00.753Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -113,6 +113,16 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p2/main/projects/{macro}/{macro}.gds",
       "tiles": 240,
       "projects": 95
+    },
+    {
+      "id": "tt09",
+      "name": "Tiny Tapeout 9",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-09",
+      "gds_url": "",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-09/main/projects/{macro}/{macro}.gds",
+      "rom_data": "shuttle=tt09\nrepo=TinyTapeout/tinytapeout-09\ncommit=c9701782\n",
+      "tiles": 512,
+      "projects": 369
     }
   ]
 }
