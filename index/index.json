@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-11-10T20:44:00.753Z",
+  "updated": "2024-11-11T12:33:07.874Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -118,7 +118,7 @@
       "id": "tt09",
       "name": "Tiny Tapeout 9",
       "repo": "https://github.com/TinyTapeout/tinytapeout-09",
-      "gds_url": "",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-09/releases/download/tapeout-ci2411/caravel_24116490.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-09/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt09\nrepo=TinyTapeout/tinytapeout-09\ncommit=c9701782\n",
       "tiles": 512,
