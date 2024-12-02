@@ -32,6 +32,16 @@
               "pattern": "^[a-z_]+\\[\\d+\\]$"
             },
             "additionalProperties": { "type": "string" }
+          },
+          "danger_level": {
+            "type": "string",
+            "enum": ["unknown", "safe", "medium", "high"],
+            "default": "unknown",
+            "description": "Indicates the safety level of the design: 'safe' = design is safe to run, 'medium' = design can damage the ASIC under certain conditions, 'high' = design will damage the ASIC, 'unknown' = safety level is unknown"
+          },
+          "danger_reason": {
+            "type": "string",
+            "description": "Explanation of why the danger level is set to 'medium' or 'high'"
           }
         },
         "required": [

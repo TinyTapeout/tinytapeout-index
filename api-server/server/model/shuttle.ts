@@ -28,6 +28,8 @@ export interface IShuttleIndexProject {
   repo: string;
   commit: string;
   pinout: Record<string, string>;
+  danger_level?: 'safe' | 'medium' | 'high' | 'unknown';
+  danger_reason?: string;
 }
 
 export function getShuttles() {

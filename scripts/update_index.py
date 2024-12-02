@@ -18,6 +18,8 @@ import yaml
 SCANCHAIN_SHUTTLES = ["tt02", "tt03"]
 # In legacy shuttles, the info.yaml files were committed after the fact, to a different path
 LEGACY_SHUTTLES = ["tt02", "tt03", "tt03p5"]
+# The following shuttles do not have a danger_level.yaml file:
+NO_DANGER_LEVEL_SHUTTLES = ["tt02", "tt03", "tt03p5", "tt04", "tt05", "ttihp0p2"]
 
 VALID_PINOUT_KEYS = [
     "ui[0]",
@@ -142,8 +144,17 @@ output_path = root / "index" / f"{shuttle['id']}.json"
 with urllib.request.urlopen(shuttle_index_url(repo, args.shuttle_id)) as f:
     index_json = json.load(f)
 
-projects = []
+branch = "main" if args.shuttle_id != "tt02" else "tt02"
+projects_dir = "projects" if args.shuttle_id not in LEGACY_SHUTTLES else "project_info"
 cache_buster = int(time.time())
+danger_level_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/danger_level.yaml?token={cache_buster}"
+if args.shuttle_id not in NO_DANGER_LEVEL_SHUTTLES:
+    with urllib.request.urlopen(danger_level_url) as f:
+        danger_level_info = yaml.safe_load(f) or {}
+else:
+    danger_level_info = {}
+
+projects = []
 macro_addresses = {}
 project_index = []
 if "projects" in index_json:
@@ -163,10 +174,6 @@ for address, project_entry in project_index:
         continue
     macro_addresses[macro] = address
     logging.info(f"Updating {macro} at {address}...")
-    projects_dir = (
-        "projects" if args.shuttle_id not in LEGACY_SHUTTLES else "project_info"
-    )
-    branch = "main" if args.shuttle_id != "tt02" else "tt02"
     yaml_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/{macro}/info.yaml?token={cache_buster}"
     with urllib.request.urlopen(yaml_url) as f:
         project_yaml = yaml.safe_load(f)
@@ -190,25 +197,33 @@ for address, project_entry in project_index:
         logging.warning(f"{macro}: invalid pinout keys: {', '.join(invalid_keys)}")
     pinout = {k: v for k, v in pinout.items() if k in valid_pinout_keys}
 
-    projects.append(
-        {
-            "macro": macro,
-            "address": int(address),
-            "title": project_info["title"],
-            "author": project_info["author"],
-            "description": project_info["description"],
-            "clock_hz": (
-                project_info["clock_hz"]
-                if isinstance(project_info.get("clock_hz", ""), int)
-                else 0
-            ),
-            "tiles": project_entry.get("tiles", "1x1"),
-            "analog_pins": project_entry.get("analog_pins", []),
-            "repo": project_entry["repo"],
-            "commit": project_entry.get("commit", ""),
-            "pinout": pinout,
-        }
-    )
+    project_data = {
+        "macro": macro,
+        "address": int(address),
+        "title": project_info["title"],
+        "author": project_info["author"],
+        "description": project_info["description"],
+        "clock_hz": (
+            project_info["clock_hz"]
+            if isinstance(project_info.get("clock_hz", ""), int)
+            else 0
+        ),
+        "tiles": project_entry.get("tiles", "1x1"),
+        "analog_pins": project_entry.get("analog_pins", []),
+        "repo": project_entry["repo"],
+        "commit": project_entry.get("commit", ""),
+        "pinout": pinout,
+    }
+
+    if macro in danger_level_info:
+        project_danger_level = danger_level_info[macro]
+        level_value = project_danger_level["level"]
+        assert level_value in ['safe', 'medium', 'high', 'unknown']
+        project_data["danger_level"] = level_value
+        if "reason" in project_danger_level:
+            project_data["danger_reason"] = project_danger_level["reason"]
+
+    projects.append(project_data)
 
 projects.sort(key=lambda x: x["macro"])
 
