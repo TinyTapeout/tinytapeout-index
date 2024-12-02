@@ -3,8 +3,8 @@
   "id": "tt06",
   "name": "Tiny Tapeout 6",
   "repo": "https://github.com/TinyTapeout/tinytapeout-06",
-  "commit": "e3087abe4be05483826027f1992792a28b740f58",
-  "updated": "2024-11-05T08:45:09Z",
+  "commit": "56403609169700f814ff80260afa478859411131",
+  "updated": "2024-12-02T12:48:07Z",
   "projects": [
     {
       "macro": "tt_um_3515_sequenceDetector",
@@ -2915,7 +2915,9 @@
         "ua[1]": "V-",
         "ua[2]": "V+",
         "ua[3]": "Vout"
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "There is an error in that schematic causing an abnormally high bias current."
     },
     {
       "macro": "tt_um_duk_lif",
@@ -5220,11 +5222,11 @@
         "ui[0]": "DEBUG_OUT_SELECT_0",
         "ui[1]": "DEBUG_OUT_SELECT_1",
         "ui[2]": "DEBUG_OUT_SELECT_2",
-        "ui[3]": "DEMO_ROM_ENABLE",
-        "ui[4]": "",
+        "ui[3]": "HALT_CU",
+        "ui[4]": "DEMO_ROM_ENABLE",
         "ui[5]": "",
         "ui[6]": "",
-        "ui[7]": "",
+        "ui[7]": "ENABLE_GEN_REGS",
         "uo[0]": "ADDR_OUT_0",
         "uo[1]": "ADDR_OUT_1",
         "uo[2]": "ADDR_OUT_2",
