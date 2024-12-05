@@ -41,9 +41,8 @@ export function getShuttleInfo(id: string) {
 }
 
 export async function loadShuttleIndex(id: string) {
-  const cacheBuster = Date.now();
   const response = await fetch(
-    `https://raw.githubusercontent.com/TinyTapeout/tinytapeout-index/main/index/${id}.json?token=${cacheBuster}`,
+    `https://raw.githubusercontent.com/TinyTapeout/tinytapeout-index/main/index/${id}.json`,
   );
   if (!response.ok) {
     return null;

@@ -8,14 +8,13 @@ import { getProjectBaseUrl, oldDocsShuttles } from '../../../../model/shuttle';
 export default eventHandler(async (event) => {
   const { shuttle, macro } = event.context.params;
 
-  const cacheBuster = Date.now();
   const projectUrl = getProjectBaseUrl(shuttle, macro);
   if (!projectUrl) {
     throw createError({ status: 404, message: 'Not found' });
   }
 
   if (!oldDocsShuttles.includes(shuttle)) {
-    const infoUrl = `${projectUrl}/docs/info.md?token=${cacheBuster}`;
+    const infoUrl = `${projectUrl}/docs/info.md`;
     const response = await fetch(infoUrl);
     if (!response.ok) {
       throw createError({ status: 404, message: 'Not found' });
@@ -28,7 +27,7 @@ export default eventHandler(async (event) => {
     });
   }
 
-  const infoUrl = `${projectUrl}/info.yaml?token=${cacheBuster}`;
+  const infoUrl = `${projectUrl}/info.yaml`;
   const response = await fetch(infoUrl);
   if (!response.ok) {
     throw createError({ status: 404, message: 'Not found' });

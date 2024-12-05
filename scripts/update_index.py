@@ -146,8 +146,7 @@ with urllib.request.urlopen(shuttle_index_url(repo, args.shuttle_id)) as f:
 
 branch = "main" if args.shuttle_id != "tt02" else "tt02"
 projects_dir = "projects" if args.shuttle_id not in LEGACY_SHUTTLES else "project_info"
-cache_buster = int(time.time())
-danger_level_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/danger_level.yaml?token={cache_buster}"
+danger_level_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/danger_level.yaml"
 if args.shuttle_id not in NO_DANGER_LEVEL_SHUTTLES:
     with urllib.request.urlopen(danger_level_url) as f:
         danger_level_info = yaml.safe_load(f) or {}
@@ -174,7 +173,7 @@ for address, project_entry in project_index:
         continue
     macro_addresses[macro] = address
     logging.info(f"Updating {macro} at {address}...")
-    yaml_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/{macro}/info.yaml?token={cache_buster}"
+    yaml_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/{macro}/info.yaml"
     with urllib.request.urlopen(yaml_url) as f:
         project_yaml = yaml.safe_load(f)
     version = project_yaml.get("yaml_version", 1)

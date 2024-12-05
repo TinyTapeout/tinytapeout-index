@@ -11,14 +11,12 @@ export default eventHandler(async (event) => {
     throw createError({ status: 404, message: 'Not found' });
   }
 
-  const cacheBuster = Date.now();
-
   if (oldDocsShuttles.includes(shuttle)) {
     if (!path.startsWith('picture.')) {
       throw createError({ status: 404, message: 'Not found' });
     }
-    return await fetch(`${projectUrl}/${path}?token=${cacheBuster}`);
+    return await fetch(`${projectUrl}/${path}`);
   }
 
-  return await fetch(`${projectUrl}/docs/${path}?token=${cacheBuster}`);
+  return await fetch(`${projectUrl}/docs/${path}`);
 });
