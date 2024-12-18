@@ -3,8 +3,8 @@
   "id": "tt06",
   "name": "Tiny Tapeout 6",
   "repo": "https://github.com/TinyTapeout/tinytapeout-06",
-  "commit": "56403609169700f814ff80260afa478859411131",
-  "updated": "2024-12-02T12:48:07Z",
+  "commit": "5df63293851dbf867a832a683cd85c639d8d9391",
+  "updated": "2024-12-18T14:07:31Z",
   "projects": [
     {
       "macro": "tt_um_3515_sequenceDetector",
@@ -815,7 +815,9 @@
         "uio[5]": "data_in[5]",
         "uio[6]": "data_in[6]",
         "uio[7]": "data_in[7]"
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "There is a potential internal driver conflict after project selection until the first clock."
     },
     {
       "macro": "tt_um_MichaelBell_tinyQV",
