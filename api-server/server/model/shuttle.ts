@@ -1,4 +1,5 @@
 import indexJson from '../../../index/index.json';
+import unknownShuttle from '../model/unknown.json';
 
 /** In legacy shuttles, the info.yaml files were committed after the fact, to a different path */
 export const legacyShuttles = ['tt02', 'tt03', 'tt03p5'];
@@ -41,6 +42,9 @@ export function getShuttleInfo(id: string) {
 }
 
 export async function loadShuttleIndex(id: string) {
+  if (id === 'unknown') {
+    return unknownShuttle as IShuttleIndex;
+  }
   const response = await fetch(
     `https://raw.githubusercontent.com/TinyTapeout/tinytapeout-index/main/index/${id}.json`,
   );
