@@ -3,8 +3,8 @@
   "id": "tt09",
   "name": "Tiny Tapeout 9",
   "repo": "https://github.com/TinyTapeout/tinytapeout-09",
-  "commit": "c9701782ae3a61874681404a88c7ec2c23476991",
-  "updated": "2024-11-10T20:57:46Z",
+  "commit": "5981dfd58065c10dd41025203c926df9cf267426",
+  "updated": "2025-01-12T21:34:51Z",
   "projects": [
     {
       "macro": "tt_um_09eksdee",
@@ -96,7 +96,7 @@
       "title": "2048 sliding tile puzzle game (VGA)",
       "author": "Uri Shaked",
       "description": "Slide numbered tiles on a grid to combine them to create a tile with the number 2048.",
-      "clock_hz": 0,
+      "clock_hz": 25175000,
       "tiles": "2x2",
       "analog_pins": [],
       "repo": "https://github.com/urish/tt09-2048-game",
