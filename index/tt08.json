@@ -4,7 +4,7 @@
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
   "commit": "aeb0325ad783be06178f47c2def4f1e81b0fc4bb",
-  "updated": "2024-12-02T13:17:45Z",
+  "updated": "2025-01-12T21:32:03Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -100,7 +100,7 @@
       "title": "2048 sliding tile puzzle game (VGA)",
       "author": "Uri Shaked",
       "description": "Slide numbered tiles on a grid to combine them to create a tile with the number 2048.",
-      "clock_hz": 0,
+      "clock_hz": 25175000,
       "tiles": "2x2",
       "analog_pins": [],
       "repo": "https://github.com/urish/tt08-2048-game",
@@ -4206,7 +4206,7 @@
       "title": "VGA Screensaver with Tiny Tapeout Logo",
       "author": "Uri Shaked",
       "description": "Tiny Tapeout Logo bouncing around the screen (640x480, TinyVGA Pmod)",
-      "clock_hz": 0,
+      "clock_hz": 25175000,
       "tiles": "1x1",
       "analog_pins": [],
       "repo": "https://github.com/TinyTapeout/tt08-logo-screensaver",
