@@ -3,8 +3,8 @@
   "id": "ttihp0p2",
   "name": "Tiny Tapeout IHP 0.2",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-0p2",
-  "commit": "b383dc750213c8e8962d99cd3a3c4d7f5f4dee0f",
-  "updated": "2024-11-05T08:54:29Z",
+  "commit": "54e271068454e71244181a12bf85a31ba968dbdd",
+  "updated": "2025-01-12T21:36:15Z",
   "projects": [
     {
       "macro": "tt_um_2048_vga_game",
@@ -12,7 +12,7 @@
       "title": "2048 sliding tile puzzle game (VGA)",
       "author": "Uri Shaked",
       "description": "Slide numbered tiles on a grid to combine them to create a tile with the number 2048.",
-      "clock_hz": 0,
+      "clock_hz": 25175000,
       "tiles": "3x2",
       "analog_pins": [],
       "repo": "https://github.com/urish/tt09-2048-game",
@@ -2938,7 +2938,7 @@
       "title": "VGA Screensaver with Tiny Tapeout Logo",
       "author": "Uri Shaked",
       "description": "Tiny Tapeout Logo bouncing around the screen (640x480, TinyVGA Pmod)",
-      "clock_hz": 0,
+      "clock_hz": 25175000,
       "tiles": "1x2",
       "analog_pins": [],
       "repo": "https://github.com/TinyTapeout/ttihp0p2-logo-screensaver",
