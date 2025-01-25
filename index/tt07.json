@@ -3,8 +3,8 @@
   "id": "tt07",
   "name": "Tiny Tapeout 7",
   "repo": "https://github.com/TinyTapeout/tinytapeout-07",
-  "commit": "97c1bb85882d5c50d1a400b2f8f2da288971436d",
-  "updated": "2024-06-05T05:25:41Z",
+  "commit": "6feee49e0a26ce88f09b85ae4077fdfc24ef9e65",
+  "updated": "2025-01-25T15:25:01Z",
   "projects": [
     {
       "macro": "tt_um_28add11_QOAdecode",
@@ -2039,7 +2039,9 @@
         "ua[3]": "",
         "ua[4]": "",
         "ua[5]": ""
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "Should be used with a bring-up script that preloads a safe configuration. Otherwise it can power up in an unknown state and may short some digital inputs (including clk & rst_n)."
     },
     {
       "macro": "tt_um_jleightcap",
