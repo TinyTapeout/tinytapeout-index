@@ -196,17 +196,20 @@ for address, project_entry in project_index:
         logging.warning(f"{macro}: invalid pinout keys: {', '.join(invalid_keys)}")
     pinout = {k: v for k, v in pinout.items() if k in valid_pinout_keys}
 
+    clock_hz = project_info.get("clock_hz", "")
+    if isinstance(clock_hz, int) and clock_hz <= 1_000_000_000:
+        clock_hz = clock_hz
+    else:
+        logging.warning(f"{macro}: invalid clock_hz {clock_hz}")
+        clock_hz = 0
+
     project_data = {
         "macro": macro,
         "address": int(address),
         "title": project_info["title"],
         "author": project_info["author"],
         "description": project_info["description"],
-        "clock_hz": (
-            project_info["clock_hz"]
-            if isinstance(project_info.get("clock_hz", ""), int)
-            else 0
-        ),
+        "clock_hz": clock_hz,
         "tiles": project_entry.get("tiles", "1x1"),
         "analog_pins": project_entry.get("analog_pins", []),
         "repo": project_entry["repo"],
@@ -217,7 +220,7 @@ for address, project_entry in project_index:
     if macro in danger_level_info:
         project_danger_level = danger_level_info[macro]
         level_value = project_danger_level["level"]
-        assert level_value in ['safe', 'medium', 'high', 'unknown']
+        assert level_value in ["safe", "medium", "high", "unknown"]
         project_data["danger_level"] = level_value
         if "reason" in project_danger_level:
             project_data["danger_reason"] = project_danger_level["reason"]

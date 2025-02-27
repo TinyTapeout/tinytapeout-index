@@ -3,8 +3,8 @@
   "id": "tt08",
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
-  "commit": "aeb0325ad783be06178f47c2def4f1e81b0fc4bb",
-  "updated": "2025-01-12T21:32:03Z",
+  "commit": "0069cf2c331f7c1114b60182f974f5d6816c3985",
+  "updated": "2025-02-27T08:52:57Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -1093,7 +1093,7 @@
       "title": "Comm_IC",
       "author": "Bhavuk",
       "description": "Communication protcols: UART, SPI, I2C",
-      "clock_hz": 20000000000,
+      "clock_hz": 0,
       "tiles": "1x2",
       "analog_pins": [],
       "repo": "https://github.com/Bhavuk-HDL/tty8_comm_ic",
