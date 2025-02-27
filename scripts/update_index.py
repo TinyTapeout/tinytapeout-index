@@ -197,7 +197,7 @@ for address, project_entry in project_index:
     pinout = {k: v for k, v in pinout.items() if k in valid_pinout_keys}
 
     clock_hz = project_info.get("clock_hz", "")
-    if isinstance(clock_hz, int) and clock_hz <= 1_000_000_000:
+    if isinstance(clock_hz, int) and clock_hz >= 0 and clock_hz <= 1_000_000_000:
         clock_hz = clock_hz
     else:
         logging.warning(f"{macro}: invalid clock_hz {clock_hz}")
