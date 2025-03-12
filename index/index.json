@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2024-11-12T12:37:06.318Z",
+  "updated": "2025-03-12T07:30:26.302Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -109,7 +109,7 @@
       "name": "Tiny Tapeout IHP 0.2",
       "experimental": true,
       "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-0p2",
-      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p2/releases/download/tapeout/tinytapeout-ihp-0p2.oas",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p2/releases/download/tapeout-2504/tinytapeout-ihp-0p2-modpad2.oas",
       "rom_data": "shuttle=ttihp0p2\nrepo=TinyTapeout/tinytapeout-ihp-0p2\ncommit=3f7e017c\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p2/main/projects/{macro}/{macro}.gds",
       "tiles": 240,
