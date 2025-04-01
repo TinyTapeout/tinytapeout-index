@@ -124,6 +124,16 @@
       "rom_data": "shuttle=tt09\nrepo=TinyTapeout/tinytapeout-09\ncommit=c9701782\n",
       "tiles": 512,
       "projects": 369
+    },
+    {
+      "id": "ttihp25a",
+      "name": "Tiny Tapeout IHP 25a",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-25a",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-25a/releases/download/tapeout-2504/tt_ihp25a_ae4d2f9e.oas",
+      "rom_data": "shuttle=ttihp25a\nrepo=TinyTapeout/tinytapeout-ihp-25a\ncommit=ae4d2f9e\n",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25a/main/projects/{macro}/{macro}.gds",
+      "tiles": 560,
+      "projects": 548
     }
   ]
 }
