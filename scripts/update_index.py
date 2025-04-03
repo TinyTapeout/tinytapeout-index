@@ -153,6 +153,13 @@ if args.shuttle_id not in NO_DANGER_LEVEL_SHUTTLES:
 else:
     danger_level_info = {}
 
+groups_urls = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/groups.json"
+try:
+    with urllib.request.urlopen(groups_urls) as f:
+        groups = json.load(f)["groups"]
+except urllib.error.HTTPError:
+    groups = []
+
 projects = []
 macro_addresses = {}
 project_index = []
@@ -216,6 +223,8 @@ for address, project_entry in project_index:
         "commit": project_entry.get("commit", ""),
         "pinout": pinout,
     }
+    if macro in groups:
+        project_data["type"] = "group"
 
     if macro in danger_level_info:
         project_danger_level = danger_level_info[macro]
@@ -227,7 +236,35 @@ for address, project_entry in project_index:
 
     projects.append(project_data)
 
-projects.sort(key=lambda x: x["macro"])
+    if macro in groups:
+        with urllib.request.urlopen(
+            f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{projects_dir}/{macro}/subprojects.json"
+        ) as f:
+            group_info = json.load(f)
+        index_bits = group_info["index_bits"]
+        for index, subproject in group_info["projects"].items():
+            if subproject is None:
+                continue  # Empty slot
+            projects.append(
+                {
+                    "type": "subtile",
+                    "macro": subproject["macro"],
+                    "address": int(address),
+                    "subtile_addr": int(index),
+                    "subtile_addr_bits": index_bits,
+                    "subtile_group": macro,
+                    "title": subproject["title"],
+                    "author": subproject["author"],
+                    "description": subproject["description"],
+                    "clock_hz": clock_hz,
+                    "tiles": "0",
+                    "analog_pins": [],
+                    "repo": subproject.get("repo", ""),
+                    "commit": subproject.get("commit", ""),
+                    "pinout": subproject.get("pinout", {}),
+                }
+            )
+    projects.sort(key=lambda x: x["macro"])
 
 result = {
     "version": 3,

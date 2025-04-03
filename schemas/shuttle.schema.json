@@ -13,13 +13,18 @@
       "items": {
         "type": "object",
         "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["project", "group", "subtile"],
+            "default": "project"
+          },
           "macro": { "type": "string" },
           "address": { "type": "integer" },
           "title": { "type": "string" },
           "author": { "type": "string" },
           "description": { "type": "string" },
           "clock_hz": { "type": "integer" },
-          "tiles": { "type": "string", "pattern": "^[1-8]+x[12]$" },
+          "tiles": { "type": "string", "pattern": "^[1-8]+x[124]|0$" },
           "analog_pins": {
             "type": "array",
             "items": { "type": "integer" }
@@ -42,6 +47,18 @@
           "danger_reason": {
             "type": "string",
             "description": "Explanation of why the danger level is set to 'medium' or 'high'"
+          },
+          "subtile_addr": {
+            "type": "integer",
+            "description": "Index of the design within the group (for subtile designs)"
+          },
+          "subtile_addr_bits": {
+            "type": "integer",
+            "description": "Number of bits used to select the subtile (uio pins)"
+          },
+          "subtile_group": {
+            "type": "string",
+            "description": "Name of the group that the design belongs to (for subtile designs)"
           }
         },
         "required": [
