@@ -256,7 +256,7 @@ for address, project_entry in project_index:
                     "title": subproject["title"],
                     "author": subproject["author"],
                     "description": subproject["description"],
-                    "clock_hz": clock_hz,
+                    "clock_hz": subproject.get("clock_hz", "0"),
                     "tiles": "0",
                     "analog_pins": [],
                     "repo": subproject.get("repo", ""),
