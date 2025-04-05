@@ -3,7 +3,7 @@
 // Author: Uri Shaked
 
 import YAML from 'yaml';
-import { getProjectBaseUrl, oldDocsShuttles } from '../../../../model/shuttle';
+import { getProjectBaseUrl, loadShuttleIndex, oldDocsShuttles } from '../../../../model/shuttle';
 
 export default eventHandler(async (event) => {
   const { shuttle, macro } = event.context.params;
@@ -16,15 +16,33 @@ export default eventHandler(async (event) => {
   if (!oldDocsShuttles.includes(shuttle)) {
     const infoUrl = `${projectUrl}/docs/info.md`;
     const response = await fetch(infoUrl);
-    if (!response.ok) {
-      throw createError({ status: 404, message: 'Not found' });
+    if (response.ok) {
+      const text = await response.text();
+      return new Response(text, {
+        headers: {
+          'content-type': 'text/markdown',
+        },
+      });
     }
-    const text = await response.text();
-    return new Response(text, {
-      headers: {
-        'content-type': 'text/markdown',
-      },
-    });
+
+    // Check if the project is a subtile
+    const index = await loadShuttleIndex(shuttle);
+    const project = index.projects.find((p) => p.macro === macro);
+    if (project?.type === 'subtile' && project.subtile_group) {
+      const groupUrl = getProjectBaseUrl(shuttle, project.subtile_group);
+      const infoUrl = `${groupUrl}/docs/${macro}/info.md`;
+      const response = await fetch(infoUrl);
+      if (response.ok) {
+        const text = await response.text();
+        return new Response(text, {
+          headers: {
+            'content-type': 'text/markdown',
+          },
+        });
+      }
+    }
+
+    throw createError({ status: 404, message: 'Not found' });
   }
 
   const infoUrl = `${projectUrl}/info.yaml`;

@@ -18,6 +18,8 @@ export interface IShuttleIndex {
 }
 
 export interface IShuttleIndexProject {
+  /** The type of the project, the default is 'project' */
+  type?: 'project' | 'group' | 'subtile';
   macro: string;
   address: number;
   title: string;
@@ -31,6 +33,9 @@ export interface IShuttleIndexProject {
   pinout: Record<string, string>;
   danger_level?: 'safe' | 'medium' | 'high' | 'unknown';
   danger_reason?: string;
+  subtile_group?: string;
+  subtile_addr?: number;
+  subtile_addr_bits?: number;
 }
 
 export function getShuttles() {
