@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2025-04-01T11:24:51.803Z",
+  "updated": "2025-05-19T16:44:02.458Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -134,6 +134,17 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25a/main/projects/{macro}/{macro}.gds",
       "tiles": 560,
       "projects": 548
+    },
+    {
+      "id": "ttihp0p3",
+      "name": "Tiny Tapeout IHP 0.3",
+      "experimental": true,
+      "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-0p3",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p3/releases/download/tapeout-2505/FMD_QNC_TTIHP0p3.oas",
+      "rom_data": "shuttle=ttihp0p3\nrepo=TinyTapeout/tinytapeout-ihp-0p3\ncommit=c2e73668\n",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p3/main/projects/{macro}/{macro}.gds",
+      "tiles": 32,
+      "projects": 23
     }
   ]
 }
