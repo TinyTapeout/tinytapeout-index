@@ -145,6 +145,16 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p3/main/projects/{macro}/{macro}.gds",
       "tiles": 32,
       "projects": 23
+    },
+    {
+      "id": "ttcad25a",
+      "name": "Tiny Tapeout CAD 25a",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-cad-25a",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-cad-25a/releases/download/tapeout-cadence-2506/ttcad25a_734c1d4e.oas",
+      "rom_data": "shuttle=ttcad25a\nrepo=TinyTapeout/tinytapeout-cad-25a\ncommit=734c1d4e\n",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-cad-25a/main/projects/{macro}/{macro}.gds",
+      "tiles": 512,
+      "projects": 257
     }
   ]
 }
