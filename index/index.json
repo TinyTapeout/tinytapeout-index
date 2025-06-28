@@ -150,7 +150,7 @@
       "id": "ttcad25a",
       "name": "Tiny Tapeout CAD 25a",
       "repo": "https://github.com/TinyTapeout/tinytapeout-cad-25a",
-      "gds_url": "https://github.com/TinyTapeout/tinytapeout-cad-25a/releases/download/tapeout-cadence-2506/ttcad25a_734c1d4e.oas",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-cad-25a/releases/download/tapeout-cadence-2506/ttcad25a_25060014.oas",
       "rom_data": "shuttle=ttcad25a\nrepo=TinyTapeout/tinytapeout-cad-25a\ncommit=734c1d4e\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-cad-25a/main/projects/{macro}/{macro}.gds",
       "tiles": 512,
