@@ -155,6 +155,16 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-cad-25a/main/projects/{macro}/{macro}.gds",
       "tiles": 512,
       "projects": 257
+    },
+    {
+      "id": "ttihp25b",
+      "name": "Tiny Tapeout IHP 25b",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-25b",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-25b/releases/download/tapeout-2509/FMD_QNC_TTIHP25b.oas",
+      "rom_data": "shuttle=ttihp25b\nrepo=TinyTapeout/tinytapeout-ihp-25b\ncommit=54ad5301\n",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25b/main/projects/{macro}/{macro}.gds",
+      "tiles": 240,
+      "projects": 81
     }
   ]
 }
