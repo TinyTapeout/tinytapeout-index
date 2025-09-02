@@ -16,6 +16,8 @@ This repo contains the index of all the Tiny Tapeouts shuttles since TT02. The m
 | Tiny Tapeout IHP 0.2 | [index/ttihp0p2.json](index/ttihp0p2.json) |
 | Tiny Tapeout 9       | [index/tt09.json](index/tt09.json)         |
 | Tiny Tapeout IHP 25a | [index/ttihp25a.json](index/ttihp25a.json) |
+| Tiny Tapeout IHP 0.3 | [index/ttihp0p3.json](index/ttihp0p3.json) |
+| Tiny Tapeout IHP 25b | [index/ttihp25b.json](index/ttihp25b.json) |
 
 You can also find the [JSON schema](schemas/shuttle.schema.json) for the shuttle index files.
 
