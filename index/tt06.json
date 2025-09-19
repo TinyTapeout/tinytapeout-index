@@ -3,8 +3,8 @@
   "id": "tt06",
   "name": "Tiny Tapeout 6",
   "repo": "https://github.com/TinyTapeout/tinytapeout-06",
-  "commit": "e6f171679987f632a94a54b74747fd9039e0047a",
-  "updated": "2024-12-24T14:49:40Z",
+  "commit": "173a7488dd84a9dbd54f54f8a48b5e4bcae3ddda",
+  "updated": "2025-09-19T13:57:43Z",
   "projects": [
     {
       "macro": "tt_um_3515_sequenceDetector",
@@ -3242,7 +3242,7 @@
     {
       "macro": "tt_um_factory_test",
       "address": 1,
-      "title": "TinyTapeout 06 Factory Test",
+      "title": "Tiny Tapeout 6 Factory Test",
       "author": "Sylvain Munaut",
       "description": "Factory test module",
       "clock_hz": 0,
