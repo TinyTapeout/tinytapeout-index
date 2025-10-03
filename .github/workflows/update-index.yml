@@ -1,0 +1,66 @@
+name: Update shuttle indices
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'index/index.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+jobs:
+  update:
+    name: Generate shuttle index files
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run update_index.py all shuttles
+        run: |
+          set -uo pipefail
+          ids=$(jq -r '.shuttles[].id' index/index.json)
+          while IFS= read -r sid; do
+            if [ "${sid}" = "tt05of" -o "${sid}" = "ttihp0p1" ]; then
+              echo "Skipping manually indexed shuttle ${sid}"
+              continue
+            fi
+            echo "Running update for ${sid}"
+            if python -u scripts/update_index.py "${sid}"; then
+              echo "OK: ${sid}" | tee -a ${GITHUB_STEP_SUMMARY}
+            else
+              echo "FAILED: ${sid}" | tee -a ${GITHUB_STEP_SUMMARY}
+              printf "%s\n" "${sid}" >> failed_shuttles.txt
+            fi
+          done <<< "${ids}"
+
+      - name: List generated index files
+        run: |
+          echo "Generated files:"
+          ls -la index || true
+
+      - name: Upload generated indices artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shuttle-indices
+          path: index/*.json
+
+      - name: Fail if any shuttle updates failed
+        if: always()
+        run: |
+          if [ -f failed_shuttles.txt ]; then
+            echo "Some shuttle updates failed:" | tee -a ${GITHUB_STEP_SUMMARY}
+            cat failed_shuttles.txt | tee -a ${GITHUB_STEP_SUMMARY}
+            echo "##[error] Some shuttle updates failed"
+            exit 1
+          else
+            echo "All shuttle updates completed successfully" | tee -a ${GITHUB_STEP_SUMMARY}
+          fi
