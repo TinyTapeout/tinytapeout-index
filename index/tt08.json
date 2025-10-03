@@ -3,8 +3,8 @@
   "id": "tt08",
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
-  "commit": "0069cf2c331f7c1114b60182f974f5d6816c3985",
-  "updated": "2025-02-27T08:52:57Z",
+  "commit": "8d15b9360e84122528da849992a49fdcfabdc60c",
+  "updated": "2025-10-03T14:07:00Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -54,7 +54,9 @@
         "ua[3]": "iop",
         "ua[4]": "ion",
         "ua[5]": ""
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "The project shorts the inputs to GND."
     },
     {
       "macro": "tt_um_16_mic_beamformer_arghunter",
@@ -2932,7 +2934,9 @@
         "ua[3]": "ibias",
         "ua[4]": "",
         "ua[5]": ""
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "The project shorts the inputs to GND."
     },
     {
       "macro": "tt_um_nvious_graphics",
