@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2025-10-15T10:31:35.526Z",
+  "updated": "2025-10-30T13:54:48.060Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -170,7 +170,7 @@
       "id": "ttsky25a",
       "name": "Tiny Tapeout SKY 25a",
       "repo": "https://github.com/TinyTapeout/tinytapeout-sky-25a",
-      "gds_url": "https://github.com/TinyTapeout/tinytapeout-sky-25a/releases/download/tapeout-cc2509/caravel_250969f2.oas",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-sky-25a/releases/download/tapeout-cc2509/caravel_250969f2_fix_rpm.oas",
       "rom_data": "shuttle=ttsky25a\nrepo=TinyTapeout/tinytapeout-sky-25a\ncommit=58656a58\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25a/main/projects/{macro}/{macro}.gds",
       "tiles": 512,
