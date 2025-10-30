@@ -175,6 +175,17 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25a/main/projects/{macro}/{macro}.gds",
       "tiles": 512,
       "projects": 237
+    },
+    {
+      "id": "ttgf0p1",
+      "name": "Tiny Tapeout GF 0.1",
+      "experimental": true,
+      "repo": "https://github.com/TinyTapeout/tinytapeout-gf-0p1",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p1/releases/download/v20/ttgf0p1_v20.fill.gds",
+      "project_gds_url_template": null,
+      "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
+      "tiles": 24,
+      "projects": 24
     }
   ]
 }
