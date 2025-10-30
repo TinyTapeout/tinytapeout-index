@@ -20,6 +20,7 @@ This repo contains the index of all the Tiny Tapeouts shuttles since TT02. The m
 | Tiny Tapeout CAD 25a | [index/ttcad25a.json](index/ttcad25a.json) |
 | Tiny Tapeout IHP 25b | [index/ttihp25b.json](index/ttihp25b.json) |
 | Tiny Tapeout SKY 25a | [index/ttsky25a.json](index/ttsky25a.json) |
+| Tiny Tapeout GF 0.1  | [index/ttgf0p1.json](index/ttgf0p1.json)   |
 
 You can also find the [JSON schema](schemas/shuttle.schema.json) for the shuttle index files.
 
