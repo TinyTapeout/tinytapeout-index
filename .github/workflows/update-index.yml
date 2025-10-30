@@ -29,7 +29,7 @@ jobs:
           set -uo pipefail
           ids=$(jq -r '.shuttles[].id' index/index.json)
           while IFS= read -r sid; do
-            if [ "${sid}" = "tt05of" -o "${sid}" = "ttihp0p1" ]; then
+            if [ "${sid}" = "tt05of" -o "${sid}" = "ttihp0p1" -o "${sid}" = "ttgf0p1" ]; then
               echo "Skipping manually indexed shuttle ${sid}"
               continue
             fi
