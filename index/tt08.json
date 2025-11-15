@@ -3,8 +3,8 @@
   "id": "tt08",
   "name": "Tiny Tapeout 8",
   "repo": "https://github.com/TinyTapeout/tinytapeout-08",
-  "commit": "8d15b9360e84122528da849992a49fdcfabdc60c",
-  "updated": "2025-10-03T14:07:00Z",
+  "commit": "8142e246a5ce6d81cf3ee97dc58743a774ef221f",
+  "updated": "2025-11-15T05:55:37Z",
   "projects": [
     {
       "macro": "tt_um_08_sws",
@@ -4410,10 +4410,10 @@
     {
       "macro": "tt_um_tommythorn_maxbw",
       "address": 909,
-      "title": "Asynchronous Multiplier",
+      "title": "Asynchronous Self-Timed Multiplier",
       "author": "Tommy Thorn",
-      "description": "An asynchronous multiplier",
-      "clock_hz": 50000000,
+      "description": "An asynchronous self-timed bundled-data multiplier",
+      "clock_hz": 0,
       "tiles": "1x1",
       "analog_pins": [],
       "repo": "https://github.com/tommythorn/tt08-maxbw",
