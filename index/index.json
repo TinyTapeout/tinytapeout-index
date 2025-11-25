@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2025-11-25T10:27:22.094Z",
+  "updated": "2025-11-25T11:28:53.339Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -202,6 +202,7 @@
       "name": "Tiny Tapeout GF 0.2",
       "repo": "https://github.com/TinyTapeout/tinytapeout-gf-0p2",
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p2/releases/download/tapeout-ws2512/tt_gf_wrapper.oas",
+      "rom_data": "shuttle=ttgf0p2\nrepo=TinyTapeout/tinytapeout-gf-0p2\ncommit=497c8036\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-0p2/main/projects/{macro}/{macro}.oas",
       "tiles": 160,
       "projects": 52
