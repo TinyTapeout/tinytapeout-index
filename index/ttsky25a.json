@@ -3,8 +3,8 @@
   "id": "ttsky25a",
   "name": "Tiny Tapeout SKY 25a",
   "repo": "https://github.com/TinyTapeout/tinytapeout-sky-25a",
-  "commit": "85e372cfc19e94d7b572a6feae9174bc21070982",
-  "updated": "2025-11-11T12:13:51Z",
+  "commit": "3e56040801e62543fe761ff335723efdfea19198",
+  "updated": "2025-11-25T20:07:17Z",
   "projects": [
     {
       "macro": "tt_um_10_vga_crossyroad",
@@ -1536,7 +1536,9 @@
         "ua[3]": "",
         "ua[4]": "",
         "ua[5]": ""
-      }
+      },
+      "danger_level": "medium",
+      "danger_reason": "Missing vdd/vss connections for the bottom right compr cell"
     },
     {
       "macro": "tt_um_adpll",
@@ -1794,7 +1796,9 @@
         "ua[3]": "",
         "ua[4]": "",
         "ua[5]": ""
-      }
+      },
+      "danger_level": "high",
+      "danger_reason": "Reversed power and ground connections"
     },
     {
       "macro": "tt_um_analog_factory_test",
