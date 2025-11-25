@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2025-11-25T10:25:42.385Z",
+  "updated": "2025-11-25T10:27:22.094Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -181,7 +181,7 @@
       "name": "Tiny Tapeout GF 0.1",
       "experimental": true,
       "repo": "https://github.com/TinyTapeout/tinytapeout-gf-0p1",
-      "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p1/releases/download/v20/ttgf0p1_v20.fill.gds",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p1/releases/download/v23/ttgf0p1_v23.fill.gds",
       "project_gds_url_template": null,
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
       "tiles": 24,
