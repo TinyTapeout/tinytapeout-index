@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2025-11-25T11:28:53.339Z",
+  "updated": "2025-11-25T11:31:19.143Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -9,6 +9,7 @@
       "gds_url": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-02/tt02/gds/user_project_wrapper.gds.gz",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-02/tt02/gds/{macro}.gds.gz",
       "rom_data": null,
+      "pdk": "sky130A",
       "tiles": 250,
       "projects": 165
     },
@@ -19,6 +20,7 @@
       "gds_url": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03/main/gds/user_project_wrapper.gds.gz",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03/main/gds/{macro}.gds.gz",
       "rom_data": null,
+      "pdk": "sky130A",
       "tiles": 250,
       "projects": 249
     },
@@ -30,6 +32,7 @@
       "gds_url": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03p5/main/gds/user_project_wrapper.gds.gz",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03p5/main/gds/{macro}.gds.gz",
       "rom_data": null,
+      "pdk": "sky130A",
       "tiles": 32,
       "projects": 29
     },
@@ -40,6 +43,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-04/releases/download/tapeout-ci2309/chip_caravel_2309c433.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-04/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt04\nrepo=TinyTapeout/tinytapeout-04\n",
+      "pdk": "sky130A",
       "tiles": 384,
       "projects": 143
     },
@@ -50,6 +54,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-05/releases/download/tapeout-ci2311/caravel_231134c3.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-05/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt05\nrepo=TinyTapeout/tinytapeout-05\ncommit=77482643\n",
+      "pdk": "sky130A",
       "tiles": 384,
       "projects": 174
     },
@@ -60,6 +65,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-05-openframe/releases/download/tapeout-ci2311/caravel_23118e76.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-05-openframe/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt05of\nrepo=TinyTapeout/tinytapeout-05-openframe\ncommit=867b3b15\n",
+      "pdk": "sky130A",
       "tiles": 384,
       "projects": 175
     },
@@ -70,6 +76,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-06/releases/download/tapeout-ci2404/caravel_240476a0.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-06/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt06\nrepo=TinyTapeout/tinytapeout-06\ncommit=4f8caad5\n",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 238
     },
@@ -80,6 +87,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-07/releases/download/tapeout-ci2406/caravel_24066810.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-07/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt07\nrepo=TinyTapeout/tinytapeout-07\ncommit=239db054\n",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 120
     },
@@ -91,6 +99,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p1/releases/download/final/tinytapeout-ihp-0p1.gds",
       "project_gds_url_template": null,
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
+      "pdk": "ihp-sg13g2",
       "tiles": 24,
       "projects": 24
     },
@@ -101,6 +110,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-08/releases/download/tapeout-ci2409/caravel_2409485e.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-08/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt08\nrepo=TinyTapeout/tinytapeout-08\ncommit=b4342ed1\n",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 135
     },
@@ -112,6 +122,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p2/releases/download/tapeout-2504/tt_ihp0p2_d6e9a179.oas",
       "rom_data": "shuttle=ttihp0p2\nrepo=TinyTapeout/tinytapeout-ihp-0p2\ncommit=d6e9a179\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p2/main/projects/{macro}/{macro}.gds",
+      "pdk": "ihp-sg13g2",
       "tiles": 240,
       "projects": 95
     },
@@ -122,6 +133,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-09/releases/download/tapeout-ci2411/caravel_24116490.oas",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-09/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt09\nrepo=TinyTapeout/tinytapeout-09\ncommit=c9701782\n",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 369
     },
@@ -132,6 +144,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-25a/releases/download/tapeout-2504/tt_ihp25a_ae4d2f9e.oas",
       "rom_data": "shuttle=ttihp25a\nrepo=TinyTapeout/tinytapeout-ihp-25a\ncommit=ae4d2f9e\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25a/main/projects/{macro}/{macro}.gds",
+      "pdk": "ihp-sg13g2",
       "tiles": 560,
       "projects": 548
     },
@@ -143,6 +156,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p3/releases/download/tapeout-2505/FMD_QNC_TTIHP0p3.oas",
       "rom_data": "shuttle=ttihp0p3\nrepo=TinyTapeout/tinytapeout-ihp-0p3\ncommit=c2e73668\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p3/main/projects/{macro}/{macro}.gds",
+      "pdk": "ihp-sg13g2",
       "tiles": 32,
       "projects": 23
     },
@@ -153,6 +167,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-cad-25a/releases/download/tapeout-cadence-2506/ttcad25a_25060014.oas",
       "rom_data": "shuttle=ttcad25a\nrepo=TinyTapeout/tinytapeout-cad-25a\ncommit=734c1d4e\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-cad-25a/main/projects/{macro}/{macro}.gds",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 257
     },
@@ -163,6 +178,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-25b/releases/download/tapeout-2509/FMD_QNC_TTIHP25b.oas",
       "rom_data": "shuttle=ttihp25b\nrepo=TinyTapeout/tinytapeout-ihp-25b\ncommit=54ad5301\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25b/main/projects/{macro}/{macro}.gds",
+      "pdk": "ihp-sg13g2",
       "tiles": 240,
       "projects": 81
     },
@@ -173,6 +189,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-sky-25a/releases/download/tapeout-cc2509/caravel_250969f2.oas",
       "rom_data": "shuttle=ttsky25a\nrepo=TinyTapeout/tinytapeout-sky-25a\ncommit=85e372cf\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25a/main/projects/{macro}/{macro}.gds",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 237
     },
@@ -184,6 +201,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p1/releases/download/v23/ttgf0p1_v23.fill.gds",
       "project_gds_url_template": null,
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
+      "pdk": "gf180mcuD",
       "tiles": 24,
       "projects": 24
     },
@@ -194,6 +212,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-sky-25b/releases/download/tapeout-ci2511/caravel_25113099.oas",
       "rom_data": "shuttle=ttsky25b\nrepo=TinyTapeout/tinytapeout-sky-25b\ncommit=320d76a8\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25b/main/projects/{macro}/{macro}.oas",
+      "pdk": "sky130A",
       "tiles": 512,
       "projects": 317
     },
@@ -204,6 +223,7 @@
       "gds_url": "https://github.com/TinyTapeout/tinytapeout-gf-0p2/releases/download/tapeout-ws2512/tt_gf_wrapper.oas",
       "rom_data": "shuttle=ttgf0p2\nrepo=TinyTapeout/tinytapeout-gf-0p2\ncommit=497c8036\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-0p2/main/projects/{macro}/{macro}.oas",
+      "pdk": "gf180mcuD",
       "tiles": 160,
       "projects": 52
     }
