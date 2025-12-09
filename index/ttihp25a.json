@@ -3,8 +3,8 @@
   "id": "ttihp25a",
   "name": "Tiny Tapeout IHP 25a",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-25a",
-  "commit": "bbff9c6cc9f335713bb19eb8cd4efc2f027d488b",
-  "updated": "2025-06-03T20:38:54Z",
+  "commit": "40b34577604488d2e9dbb4dd107c54785dd01e02",
+  "updated": "2025-12-09T12:45:28Z",
   "projects": [
     {
       "macro": "tt_um_09eksdee",
@@ -1901,7 +1901,7 @@
       "address": 2,
       "title": "Verilog ring oscillator V3",
       "author": "algofoogle (Anton Maurovic)",
-      "description": "sky130 inv_2 ring oscillator with externally-selectable length",
+      "description": "TTIHP25a resubmission of TT09 ring oscillator with externally-selectable length",
       "clock_hz": 0,
       "tiles": "1x1",
       "analog_pins": [],
@@ -12275,7 +12275,7 @@
       "macro": "tt_um_vga_cbtest",
       "address": 291,
       "title": "Generate VGA output for Color Blindness Test",
-      "author": "[Krushnasis Pradhan](https://www.linkedin.com/in/krushnasis-pradhan-35881518b/), [Aniruddha Ranade](https://www.linkedin.com/in/aniruddha-ranade/)",
+      "author": "Krushnasis Pradhan, Aniruddha Ranade",
       "description": "Generate VGA output which shall display the pattern similar to Ishihara Plates",
       "clock_hz": 0,
       "tiles": "1x1",
