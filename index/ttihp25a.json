@@ -4,7 +4,7 @@
   "name": "Tiny Tapeout IHP 25a",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-25a",
   "commit": "40b34577604488d2e9dbb4dd107c54785dd01e02",
-  "updated": "2025-12-09T12:45:28Z",
+  "updated": "2025-12-10T05:12:45Z",
   "projects": [
     {
       "macro": "tt_um_09eksdee",
@@ -1863,7 +1863,7 @@
       "address": 516,
       "title": "Verilog ring oscillator V2",
       "author": "algofoogle (Anton Maurovic)",
-      "description": "Multiple simple ring oscillators by instantiating sky130 inv_2 inverter rings",
+      "description": "Multiple ring oscillators with simple PWM experiments",
       "clock_hz": 0,
       "tiles": "1x1",
       "analog_pins": [],
