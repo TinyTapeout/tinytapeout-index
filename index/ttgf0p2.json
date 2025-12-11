@@ -3,8 +3,8 @@
   "id": "ttgf0p2",
   "name": "Tiny Tapeout GF 0.2",
   "repo": "https://github.com/TinyTapeout/tinytapeout-gf-0p2",
-  "commit": "5b9d3d04fdb56348e27e6931d5035beead03311c",
-  "updated": "2025-11-25T10:25:28Z",
+  "commit": "7416232bbc6b59ebd6b3665de3b2da161c1819d3",
+  "updated": "2025-12-11T20:07:34Z",
   "projects": [
     {
       "macro": "tt_um_2048_vga_game",
@@ -54,7 +54,7 @@
       "tiles": "3x4",
       "analog_pins": [],
       "repo": "https://github.com/ZDYnb/ttgf-BLE_Receiver",
-      "commit": "a887ba9ab0d8f19a541be8259c8ea887fa4dd1e7",
+      "commit": "deabc38bde53aaf5e57fbd24a8e095c6f116ff40",
       "pinout": {
         "ui[0]": "I_BPF[0]",
         "ui[1]": "I_BPF[1]",
@@ -130,7 +130,7 @@
       "tiles": "3x4",
       "analog_pins": [],
       "repo": "https://github.com/MichaelBell/ttgf0p2-tinyQV",
-      "commit": "2f472a058059c56515993494dabf57a73aaeee6f",
+      "commit": "05c3ee5be9221ce617564e19ce953a90410641c7",
       "pinout": {
         "ui[0]": "Interrupt 0",
         "ui[1]": "Interrupt 1",
@@ -244,7 +244,7 @@
       "tiles": "3x4",
       "analog_pins": [],
       "repo": "https://github.com/algofoogle/ttgf0p2-raybox-zero",
-      "commit": "c6163b03813f9a98867bc87d601551f0c3a0ac2b",
+      "commit": "e970ffb25714b76fddfa19c0add7e5405de5c3a3",
       "pinout": {
         "ui[0]": "spi_sck",
         "ui[1]": "spi_sdi",
@@ -1076,11 +1076,11 @@
       "title": "KianV uLinux SoC",
       "author": "Hirosh Dabui",
       "description": "A RISC-V ASIC that can boot \u03bcLinux.",
-      "clock_hz": 0,
+      "clock_hz": 16000000,
       "tiles": "4x4",
       "analog_pins": [],
       "repo": "https://github.com/TinyTapeout/KianV-RV32IMA-RISC-V-uLinux-SoC",
-      "commit": "9af092d9e1e1449494281b5122d15eba2bcf1ce9",
+      "commit": "a55d1691d6496b931cbb09c06969a230b7c80bd1",
       "pinout": {
         "ui[0]": "gpio[0]",
         "ui[1]": "gpio[1]",
@@ -1118,7 +1118,7 @@
       "tiles": "3x4",
       "analog_pins": [],
       "repo": "https://github.com/kdp1965/ttgf-um-lisa",
-      "commit": "430b5771489fea04e0c7d4853cd45afb996c88ad",
+      "commit": "47394c45e77265bec53c8fc3c45bab469d1fa8cc",
       "pinout": {
         "ui[0]": "pa[0]/b_div[0]/rx2",
         "ui[1]": "pa[1]/b_div[1]/rx2",
@@ -1498,7 +1498,7 @@
       "tiles": "3x2",
       "analog_pins": [],
       "repo": "https://github.com/schoeberl/ttgf-wildcat",
-      "commit": "55500cbf607785de31a8d38fc6acbc0f5494bacf",
+      "commit": "3d80b972aa3b11ce2be4ffd5a5790aa78f4ae622",
       "pinout": {
         "ui[0]": "in0",
         "ui[1]": "in1",
@@ -1535,8 +1535,8 @@
       "clock_hz": 0,
       "tiles": "4x2",
       "analog_pins": [],
-      "repo": "https://github.com/kinako71-2/TTGF0p2",
-      "commit": "13bb5dc7f7c80b3dc6879ed363e7ab3ae518306d",
+      "repo": "https://github.com/urish/TTGF0p2",
+      "commit": "3bd809e258c74a1c6de2e5ee8c5b6b84459662ce",
       "pinout": {
         "ui[0]": "1st bit of xth instruction byte",
         "ui[1]": "2nd bit of xth instruction byte",
