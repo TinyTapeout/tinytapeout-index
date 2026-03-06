@@ -3,8 +3,8 @@
   "id": "ttgf0p2",
   "name": "Tiny Tapeout GF 0.2",
   "repo": "https://github.com/TinyTapeout/tinytapeout-gf-0p2",
-  "commit": "58d12543f2093c6cadb4449c25ae0ac35c784bce",
-  "updated": "2026-03-03T13:44:40Z",
+  "commit": "622aa779a5e7cf4c1007c6f6ad939678d21897b0",
+  "updated": "2026-03-06T19:30:53Z",
   "projects": [
     {
       "macro": "tt_um_2048_vga_game",
@@ -324,9 +324,9 @@
       "pinout": {
         "ui[0]": "cpol",
         "ui[1]": "cpha",
-        "ui[2]": "i2c_addr[0}",
-        "ui[3]": "i2c_addr[1}",
-        "ui[4]": "i2c_addr[2}",
+        "ui[2]": "i2c_addr[0]",
+        "ui[3]": "i2c_addr[1]",
+        "ui[4]": "i2c_addr[2]",
         "ui[5]": "",
         "ui[6]": "",
         "ui[7]": "peripheral selector (SPI=0/I2C=1)",
