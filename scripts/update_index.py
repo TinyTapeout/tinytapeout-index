@@ -186,7 +186,7 @@ for address, project_entry in project_index:
     version = project_yaml.get("yaml_version", 1)
     project_info = (
         project_yaml["documentation"]
-        if "documentation" in project_yaml
+        if "documentation" in project_yaml and version < 6
         else project_yaml["project"]
     )
     pinout = project_yaml.get("pinout", None)
