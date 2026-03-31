@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Run update_index.py all shuttles
+      - name: Run update_projects.py for all shuttles
         run: |
           set -uo pipefail
           ids=$(jq -r '.shuttles[].id' index/index.json)
@@ -34,7 +34,7 @@ jobs:
               continue
             fi
             echo "Running update for ${sid}"
-            if python -u scripts/update_index.py "${sid}"; then
+            if python -u scripts/update_projects.py "${sid}"; then
               echo "OK: ${sid}" | tee -a ${GITHUB_STEP_SUMMARY}
             else
               echo "FAILED: ${sid}" | tee -a ${GITHUB_STEP_SUMMARY}

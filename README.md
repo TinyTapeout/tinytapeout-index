@@ -40,14 +40,26 @@ To get information about a specific project, use one of the following URL patter
 - `/[shuttle]/[project].json` - Get information about a specific project on a shuttle. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom.json](https://index.tinytapeout.com/tt04/tt_um_chip_rom.json).
 - `/[shuttle]/[project]/docs/info.md` - Get the project's documentation in Markdown format. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom/docs/info.md](https://index.tinytapeout.com/tt04/tt_um_chip_rom/docs/info.md).
 
-## Regenerating the Index
+## Updating the Shuttle Index
 
-To regenerate the index files, run the following commands:
+To add or update a shuttle entry in `index/index.json` from a GitHub Actions run:
 
 ```bash
 cd scripts
 pip install -r requirements.txt
-python update_index <shuttle>
+python update_shuttle.py <run_url>
+```
+
+Where `<run_url>` is the GitHub Actions run URL (e.g. `https://github.com/TinyTapeout/tinytapeout-ihp-26a/actions/runs/23748510488`).
+
+## Regenerating Project Index Files
+
+To regenerate the per-shuttle project index files, run:
+
+```bash
+cd scripts
+pip install -r requirements.txt
+python update_projects.py <shuttle>
 ```
 
 Where `<shuttle>` is the identifier of the shuttle (e.g. tt04).
