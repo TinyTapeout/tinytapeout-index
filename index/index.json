@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-03-31T20:31:07.251Z",
+  "updated": "2026-03-31T20:42:02.239Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -237,6 +237,17 @@
       "pdk": "ihp-sg13g2",
       "tiles": 560,
       "projects": 283
+    },
+    {
+      "id": "ttihp0p4",
+      "name": "Tiny Tapeout IHP 0p4",
+      "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-0p4",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-0p4/releases/download/tapeout-2603/TT0004.oas",
+      "rom_data": "shuttle=ttihp0p4\nrepo=TinyTapeout/tinytapeout-ihp-0p4\ncommit=e5834cb4\n",
+      "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p4/main/projects/{macro}/{macro}.oas",
+      "pdk": "ihp-sg13cmos5l",
+      "tiles": 240,
+      "projects": 40
     }
   ]
 }
