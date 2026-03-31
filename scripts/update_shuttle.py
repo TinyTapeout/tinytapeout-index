@@ -62,6 +62,21 @@ def get_repo_config(owner, repo):
     return yaml.safe_load(decoded)
 
 
+def find_gds_url(owner, repo, commit):
+    releases = json.loads(gh(["api", f"repos/{owner}/{repo}/releases"]))
+    for release in releases:
+        tag = release["tag_name"]
+        tag_info = json.loads(
+            gh(["api", f"repos/{owner}/{repo}/git/ref/tags/{tag}"])
+        )
+        if tag_info["object"]["sha"] != commit:
+            continue
+        for asset in release["assets"]:
+            if asset["name"].endswith(".oas"):
+                return asset["browser_download_url"]
+    return None
+
+
 def get_total_tiles(shuttle_id):
     url = f"https://app.tinytapeout.com/api/shuttles/{shuttle_id}"
     req = urllib.request.Request(url)
@@ -98,6 +113,7 @@ def main():
     )
 
     total_tiles = get_total_tiles(shuttle_id)
+    gds_url = find_gds_url(owner, repo_name, shuttle_data["commit"])
 
     root = Path(__file__).resolve().parents[1]
     index_path = root / "index" / "index.json"
@@ -113,13 +129,15 @@ def main():
         entry["rom_data"] = rom_data
         entry["tiles"] = total_tiles
         entry["projects"] = num_projects
+        if gds_url:
+            entry["gds_url"] = gds_url
         print(f"Updated existing entry for {shuttle_id}")
     else:
         entry = {
             "id": shuttle_id,
             "name": shuttle_data["name"],
             "repo": shuttle_data["repo"],
-            "gds_url": None,
+            "gds_url": gds_url,
             "rom_data": rom_data,
             "project_gds_url_template": f"https://raw.githubusercontent.com/{owner}/{repo_name}/main/projects/{{macro}}/{{macro}}.oas",
             "pdk": pdk,
