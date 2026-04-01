@@ -7,7 +7,6 @@
 import argparse
 import base64
 import json
-import re
 import subprocess
 import sys
 import tempfile
@@ -17,26 +16,7 @@ from pathlib import Path
 
 import yaml
 
-
-def parse_run_url(url):
-    match = re.match(
-        r"https://github\.com/([^/]+)/([^/]+)/actions/runs/(\d+)", url
-    )
-    if not match:
-        print(f"Error: Invalid run URL: {url}", file=sys.stderr)
-        sys.exit(1)
-    return match.group(1), match.group(2), match.group(3)
-
-
-def gh(args):
-    result = subprocess.run(["gh"] + args, capture_output=True)
-    if result.returncode != 0:
-        print(
-            f"Error: gh {' '.join(args)} failed: {result.stderr.decode()}",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    return result.stdout.decode().strip()
+from gh_utils import find_release_for_commit, gh, parse_run_url
 
 
 def download_shuttle_index(owner, repo, run_id):
@@ -63,14 +43,8 @@ def get_repo_config(owner, repo):
 
 
 def find_gds_url(owner, repo, commit):
-    releases = json.loads(gh(["api", f"repos/{owner}/{repo}/releases"]))
-    for release in releases:
-        tag = release["tag_name"]
-        tag_info = json.loads(
-            gh(["api", f"repos/{owner}/{repo}/git/ref/tags/{tag}"])
-        )
-        if tag_info["object"]["sha"] != commit:
-            continue
+    release = find_release_for_commit(owner, repo, commit)
+    if release:
         for asset in release["assets"]:
             if asset["name"].endswith(".oas"):
                 return asset["browser_download_url"]
