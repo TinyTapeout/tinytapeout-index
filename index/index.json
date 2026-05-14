@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-12T15:19:27.622Z",
+  "updated": "2026-05-14T21:42:10.803Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -253,8 +253,8 @@
       "id": "ttsky26a",
       "name": "Tiny Tapeout SKY 26a",
       "repo": "https://github.com/TinyTapeout/tinytapeout-sky-26a",
-      "gds_url": null,
-      "rom_data": "shuttle=ttsky26a\nrepo=TinyTapeout/tinytapeout-sky-26a\ncommit=473d248d\n",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-sky-26a/releases/download/tapeout-ci2605/caravel_26050029.oas",
+      "rom_data": "shuttle=ttsky26a\nrepo=TinyTapeout/tinytapeout-sky-26a\ncommit=ca970aed\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-26a/main/projects/{macro}/{macro}.oas",
       "pdk": "sky130A",
       "tiles": 512,
