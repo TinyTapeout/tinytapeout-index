@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-22T08:40:25.844Z",
+  "updated": "2026-09-22T11:05:59.878Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -319,8 +319,8 @@
       "id": "ttihp26b",
       "name": "Tiny Tapeout IHP 26b",
       "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-26b",
-      "gds_url": null,
-      "rom_data": "shuttle=ttihp26b\nrepo=TinyTapeout/tinytapeout-ihp-26b\ncommit=d497eede\n",
+      "gds_url": "https://github.com/TinyTapeout/tinytapeout-ihp-26b/releases/download/tapeout-2609/TT2609.oas",
+      "rom_data": "shuttle=ttihp26b\nrepo=TinyTapeout/tinytapeout-ihp-26b\ncommit=6e6087f7\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-26b/main/projects/{macro}/{macro}.oas",
       "pdk": "ihp-sg13g2",
       "tiles": 240,

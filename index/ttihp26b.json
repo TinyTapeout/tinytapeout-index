@@ -3,8 +3,8 @@
   "id": "ttihp26b",
   "name": "Tiny Tapeout IHP 26b",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-26b",
-  "commit": "d497eedebac7a6245fe2dc2424519a840aa7e54c",
-  "updated": "2026-09-22T08:41:27Z",
+  "commit": "6e6087f766f57d527526acb024a333beb8137569",
+  "updated": "2026-09-22T10:28:26Z",
   "projects": [
     {
       "macro": "tt_um_140oo041_fpu130",
@@ -540,7 +540,7 @@
     },
     {
       "macro": "tt_um_aion",
-      "address": 198,
+      "address": 42,
       "title": "AION",
       "author": "Filippo Quadri",
       "description": "32-bit and 16-bit posit arithmetic unit behind a byte-wide register interface",
@@ -1386,7 +1386,7 @@
     },
     {
       "macro": "tt_um_dpi_adexp",
-      "address": 202,
+      "address": 194,
       "title": "AdExp DPI Neuron ",
       "author": "Saptarshi Ghosh",
       "description": "Adaptive Exponential Integrate-and-Fire Neuron ",
@@ -3838,7 +3838,7 @@
     },
     {
       "macro": "tt_um_snn_voice_calculator_mauro_ciccone",
-      "address": 42,
+      "address": 202,
       "title": "snn-voice-calculator",
       "author": "mauro",
       "description": "snn-powered voice recognition single digit calculator",
