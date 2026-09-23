@@ -3,8 +3,8 @@
   "id": "ttihp26b",
   "name": "Tiny Tapeout IHP 26b",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-26b",
-  "commit": "6e6087f766f57d527526acb024a333beb8137569",
-  "updated": "2026-09-22T10:28:26Z",
+  "commit": "28094c5d5b02f7719f4d56d134729448725c6020",
+  "updated": "2026-09-23T17:26:59Z",
   "projects": [
     {
       "macro": "tt_um_140oo041_fpu130",
@@ -1699,7 +1699,7 @@
       "address": 166,
       "title": "AstraPIO",
       "author": "Fabien",
-      "description": "General-purpose programmable IO prototype; not ready for tapeout",
+      "description": "Programmable PIO and autonomous timed I/O coprocessor (ABI 5)",
       "clock_hz": 50000000,
       "tiles": "1x2",
       "analog_pins": [],
