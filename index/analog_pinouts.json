@@ -1,0 +1,30 @@
+{
+  "breakout-tt02": {
+    "description": "TT02 breakout (tt02, tt03) on the TT01-TT03 demo board; no analog pins",
+    "pin_labels": []
+  },
+  "breakout-tt04": {
+    "description": "TT04 breakout (tt03p5 - tt05) on tt-demo-pcb v1; no analog pins",
+    "pin_labels": []
+  },
+  "breakout-tt06": {
+    "description": "TT06 breakout (tt06 - tt08) on tt-demo-pcb v2; labels are the breakout's Analog Bank A (A0-A5) and Bank B (B0-B5) silkscreen",
+    "pin_labels": ["A0", "A1", "A2", "A3", "A4", "A5", "B0", "B1", "B2", "B3", "B4", "B5"]
+  },
+  "breakout-sky": {
+    "description": "SKY130 breakout on tt-demo-pcb v3; labels are the demo board's ANALOG header (A-X)",
+    "pin_labels": ["C", "D", "F", "G", "J", "K", "X", "W", "U", "T", "R", "Q"]
+  },
+  "breakout-ihp": {
+    "description": "IHP breakout on tt-demo-pcb v3; labels are the demo board's ANALOG header (A-X)",
+    "pin_labels": ["B", "C", "D", "F", "G", "J", "K", "L", "N", "Q", "R", "T", "U", "V", "W", "X"]
+  },
+  "breakout-gf": {
+    "description": "GF180 breakout on tt-demo-pcb v3; labels are the demo board's ANALOG header (A-X)",
+    "pin_labels": ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "U", "V", "W", "X"]
+  },
+  "never-shipped": {
+    "description": "Chips never shipped on a board",
+    "pin_labels": []
+  }
+}

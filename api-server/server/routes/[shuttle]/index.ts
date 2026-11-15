@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2024 Tiny Tapeout LTD
+// Copyright 2026 Tiny Tapeout B.V.
 // Author: Uri Shaked
 
+import { getAnalogPinout } from '../../model/analog_pinouts';
 import {
   type IShuttleIndex,
   type IShuttleIndexProject,
@@ -44,5 +45,5 @@ export default eventHandler(async (event) => {
     });
   }
 
-  return index;
+  return { ...index, analog_pinout: getAnalogPinout(slug) };
 });

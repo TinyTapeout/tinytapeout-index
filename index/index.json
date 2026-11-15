@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-22T11:05:59.878Z",
+  "updated": "2026-11-15T19:53:08.295Z",
   "shuttles": [
     {
       "id": "tt02",
@@ -10,6 +10,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-02/tt02/gds/{macro}.gds.gz",
       "rom_data": null,
       "pdk": "sky130A",
+      "board": "breakout-tt02",
       "tiles": 250,
       "projects": 165
     },
@@ -21,6 +22,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03/main/gds/{macro}.gds.gz",
       "rom_data": null,
       "pdk": "sky130A",
+      "board": "breakout-tt02",
       "tiles": 250,
       "projects": 249
     },
@@ -33,6 +35,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-03p5/main/gds/{macro}.gds.gz",
       "rom_data": null,
       "pdk": "sky130A",
+      "board": "breakout-tt04",
       "tiles": 32,
       "projects": 29
     },
@@ -44,6 +47,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-04/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt04\nrepo=TinyTapeout/tinytapeout-04\n",
       "pdk": "sky130A",
+      "board": "breakout-tt04",
       "tiles": 384,
       "projects": 143
     },
@@ -55,6 +59,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-05/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt05\nrepo=TinyTapeout/tinytapeout-05\ncommit=77482643\n",
       "pdk": "sky130A",
+      "board": "breakout-tt04",
       "tiles": 384,
       "projects": 174
     },
@@ -66,6 +71,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-05-openframe/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt05of\nrepo=TinyTapeout/tinytapeout-05-openframe\ncommit=867b3b15\n",
       "pdk": "sky130A",
+      "board": "breakout-tt04",
       "tiles": 384,
       "projects": 175
     },
@@ -77,6 +83,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-06/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt06\nrepo=TinyTapeout/tinytapeout-06\ncommit=4f8caad5\n",
       "pdk": "sky130A",
+      "board": "breakout-tt06",
       "tiles": 512,
       "projects": 238
     },
@@ -88,6 +95,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-07/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt07\nrepo=TinyTapeout/tinytapeout-07\ncommit=239db054\n",
       "pdk": "sky130A",
+      "board": "breakout-tt06",
       "tiles": 512,
       "projects": 120
     },
@@ -100,6 +108,7 @@
       "project_gds_url_template": null,
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
       "pdk": "ihp-sg13g2",
+      "board": "never-shipped",
       "tiles": 24,
       "projects": 24
     },
@@ -111,6 +120,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-08/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt08\nrepo=TinyTapeout/tinytapeout-08\ncommit=b4342ed1\n",
       "pdk": "sky130A",
+      "board": "breakout-tt06",
       "tiles": 512,
       "projects": 135
     },
@@ -123,6 +133,7 @@
       "rom_data": "shuttle=ttihp0p2\nrepo=TinyTapeout/tinytapeout-ihp-0p2\ncommit=d6e9a179\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p2/main/projects/{macro}/{macro}.gds",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 240,
       "projects": 95
     },
@@ -134,6 +145,7 @@
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-09/main/projects/{macro}/{macro}.gds",
       "rom_data": "shuttle=tt09\nrepo=TinyTapeout/tinytapeout-09\ncommit=c9701782\n",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 369
     },
@@ -145,6 +157,7 @@
       "rom_data": "shuttle=ttihp25a\nrepo=TinyTapeout/tinytapeout-ihp-25a\ncommit=ae4d2f9e\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25a/main/projects/{macro}/{macro}.gds",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 560,
       "projects": 548
     },
@@ -157,6 +170,7 @@
       "rom_data": "shuttle=ttihp0p3\nrepo=TinyTapeout/tinytapeout-ihp-0p3\ncommit=c2e73668\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p3/main/projects/{macro}/{macro}.gds",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 32,
       "projects": 23
     },
@@ -168,6 +182,7 @@
       "rom_data": "shuttle=ttcad25a\nrepo=TinyTapeout/tinytapeout-cad-25a\ncommit=734c1d4e\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-cad-25a/main/projects/{macro}/{macro}.gds",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 257
     },
@@ -179,6 +194,7 @@
       "rom_data": "shuttle=ttihp25b\nrepo=TinyTapeout/tinytapeout-ihp-25b\ncommit=54ad5301\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-25b/main/projects/{macro}/{macro}.gds",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 240,
       "projects": 81
     },
@@ -190,6 +206,7 @@
       "rom_data": "shuttle=ttsky25a\nrepo=TinyTapeout/tinytapeout-sky-25a\ncommit=85e372cf\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25a/main/projects/{macro}/{macro}.gds",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 237
     },
@@ -202,6 +219,7 @@
       "project_gds_url_template": null,
       "rom_data": "shuttle=ttihp0p1\nrepo=TinyTapeout/tinytapeout-ihp-0p1\n",
       "pdk": "gf180mcuD",
+      "board": "never-shipped",
       "tiles": 24,
       "projects": 24
     },
@@ -213,6 +231,7 @@
       "rom_data": "shuttle=ttsky25b\nrepo=TinyTapeout/tinytapeout-sky-25b\ncommit=2595dd0d\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-25b/main/projects/{macro}/{macro}.oas",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 316
     },
@@ -224,6 +243,7 @@
       "rom_data": "shuttle=ttgf0p2\nrepo=TinyTapeout/tinytapeout-gf-0p2\ncommit=7416232b\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-0p2/main/projects/{macro}/{macro}.oas",
       "pdk": "gf180mcuD",
+      "board": "breakout-gf",
       "tiles": 160,
       "projects": 52
     },
@@ -235,6 +255,7 @@
       "rom_data": "shuttle=ttihp26a\nrepo=TinyTapeout/tinytapeout-ihp-26a\ncommit=7a50e8bc\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-26a/main/projects/{macro}/{macro}.oas",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 560,
       "projects": 283
     },
@@ -246,6 +267,7 @@
       "rom_data": "shuttle=ttihp0p4\nrepo=TinyTapeout/tinytapeout-ihp-0p4\ncommit=e5834cb4\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-0p4/main/projects/{macro}/{macro}.oas",
       "pdk": "ihp-sg13cmos5l",
+      "board": "breakout-ihp",
       "tiles": 240,
       "projects": 40
     },
@@ -257,6 +279,7 @@
       "rom_data": "shuttle=ttsky26a\nrepo=TinyTapeout/tinytapeout-sky-26a\ncommit=071ada00\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-26a/main/projects/{macro}/{macro}.oas",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 289
     },
@@ -268,6 +291,7 @@
       "rom_data": "shuttle=ttsky26b\nrepo=TinyTapeout/tinytapeout-sky-26b\ncommit=4596666d\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-26b/main/projects/{macro}/{macro}.oas",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 273
     },
@@ -279,6 +303,7 @@
       "rom_data": "shuttle=ttgf26a\nrepo=TinyTapeout/tinytapeout-gf-26a\ncommit=35e70261\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-26a/main/projects/{macro}/{macro}.oas",
       "pdk": "gf180mcuD",
+      "board": "breakout-gf",
       "tiles": 160,
       "projects": 95
     },
@@ -290,6 +315,7 @@
       "rom_data": "shuttle=ttgf26b\nrepo=TinyTapeout/tinytapeout-gf-26b\ncommit=b7b04a0c\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-26b/main/projects/{macro}/{macro}.oas",
       "pdk": "gf180mcuD",
+      "board": "breakout-gf",
       "tiles": 160,
       "projects": 90
     },
@@ -301,6 +327,7 @@
       "rom_data": "shuttle=ttgf0p3\nrepo=TinyTapeout/tinytapeout-gf-0p3\ncommit=30504769\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-gf-0p3/main/projects/{macro}/{macro}.oas",
       "pdk": "gf180mcuD",
+      "board": "breakout-gf",
       "tiles": 160,
       "projects": 32
     },
@@ -312,6 +339,7 @@
       "rom_data": "shuttle=ttsky26c\nrepo=TinyTapeout/tinytapeout-sky-26c\ncommit=f897359b\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-sky-26c/main/projects/{macro}/{macro}.oas",
       "pdk": "sky130A",
+      "board": "breakout-sky",
       "tiles": 512,
       "projects": 242
     },
@@ -323,6 +351,7 @@
       "rom_data": "shuttle=ttihp26b\nrepo=TinyTapeout/tinytapeout-ihp-26b\ncommit=6e6087f7\n",
       "project_gds_url_template": "https://raw.githubusercontent.com/TinyTapeout/tinytapeout-ihp-26b/main/projects/{macro}/{macro}.oas",
       "pdk": "ihp-sg13g2",
+      "board": "breakout-ihp",
       "tiles": 240,
       "projects": 123
     }

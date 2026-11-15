@@ -43,6 +43,15 @@ To get information about a specific project, use one of the following URL patter
 - `/[shuttle]/[project].json` - Get information about a specific project on a shuttle. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom.json](https://index.tinytapeout.com/tt04/tt_um_chip_rom.json).
 - `/[shuttle]/[project]/docs/info.md` - Get the project's documentation in Markdown format. For instance: [https://index.tinytapeout.com/tt04/tt_um_chip_rom/docs/info.md](https://index.tinytapeout.com/tt04/tt_um_chip_rom/docs/info.md).
 
+## Analog Pinouts
+
+Projects list their analog pins in `analog_pins` as internal analog indexes. [index/analog_pinouts.json](index/analog_pinouts.json) maps these indexes to the pin labels on each board (on tt-demo-pcb v3, the ANALOG header letters A-X). Each shuttle in `index/index.json` names its board in the `board` field, which `update_shuttle.py` sets from the PDK.
+
+The API server adds:
+
+- `analog_pinout` to `/[shuttle].json`: the shuttle's board and its `pin_labels`.
+- `analog_pin_labels` to `/[shuttle]/[project].json`: the label of each pin in `analog_pins`.
+
 ## Updating the Shuttle Index
 
 To add or update a shuttle entry in `index/index.json` from a GitHub Actions run:

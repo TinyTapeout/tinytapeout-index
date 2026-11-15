@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
 # Update index/index.json from a GitHub Actions run URL.
-# Copyright (C) 2026 Tiny Tapeout LTD
+# Copyright (C) 2026 Tiny Tapeout B.V.
 # Author: Uri Shaked
 
 import argparse
@@ -17,6 +17,14 @@ from pathlib import Path
 import yaml
 
 from gh_utils import find_release_for_commit, gh, parse_run_url
+
+# Board the chips ship on (a key of index/analog_pinouts.json), by PDK.
+PDK_BOARDS = {
+    "sky130A": "breakout-sky",
+    "gf180mcuD": "breakout-gf",
+    "ihp-sg13g2": "breakout-ihp",
+    "ihp-sg13cmos5l": "breakout-ihp",
+}
 
 
 def download_shuttle_index(owner, repo, run_id):
@@ -123,6 +131,7 @@ def main():
             "rom_data": rom_data,
             "project_gds_url_template": f"https://raw.githubusercontent.com/{owner}/{repo_name}/main/projects/{{macro}}/{{macro}}.oas",
             "pdk": pdk,
+            "board": PDK_BOARDS[pdk],
             "tiles": total_tiles,
             "projects": num_projects,
         }

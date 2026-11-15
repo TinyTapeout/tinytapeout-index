@@ -38,12 +38,29 @@ export interface IShuttleIndexProject {
   subtile_addr_bits?: number;
 }
 
+/** A shuttle entry in index/index.json */
+export interface IShuttleInfo {
+  id: string;
+  name: string;
+  repo: string;
+  gds_url: string | null;
+  project_gds_url_template: string | null;
+  rom_data: string | null;
+  pdk: string;
+  /** Board the shuttle's chips ship on, a key of index/analog_pinouts.json */
+  board: string;
+  tiles: number;
+  projects: number;
+}
+
+const shuttles: IShuttleInfo[] = indexJson.shuttles;
+
 export function getShuttles() {
   return indexJson;
 }
 
 export function getShuttleInfo(id: string) {
-  return indexJson.shuttles.find((shuttle) => shuttle.id === id);
+  return shuttles.find((shuttle) => shuttle.id === id);
 }
 
 export async function loadShuttleIndex(id: string) {
