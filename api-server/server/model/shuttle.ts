@@ -27,7 +27,7 @@ export interface IShuttleIndexProject {
   description: string;
   clock_hz: number;
   tiles: string;
-  analog_pins: string[];
+  analog_pins: number[];
   repo: string;
   commit: string;
   pinout: Record<string, string>;
